@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Head" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="894.0" prefWidth="728.0" stylesheets="@../../../../../../../mypage.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.member.mypage.MypageMyAlbListController">
+   <children>
+      <VBox layoutX="4.0" layoutY="2.0" prefHeight="894.0" prefWidth="720.0">
+         <children>
+            <AnchorPane prefHeight="587.0" prefWidth="720.0">
+               <children>
+                  <JFXCheckBox fx:id="chbox_main" checkedColor="#9c0000" layoutX="28.0" layoutY="127.0" onAction="#mainCheck" prefHeight="24.0" prefWidth="37.0" text=" " AnchorPane.leftAnchor="19.0" />
+                  <JFXTreeTableView fx:id="tbl_MyAlbLists" layoutX="11.0" layoutY="184.0" prefHeight="400.0" prefWidth="704.0" stylesheets="@../../../../../../../mypage.css">
+                     <columns>
+                        <TreeTableColumn fx:id="col_Checks" prefWidth="32.0" text="    " />
+                        <TreeTableColumn fx:id="col_Img" prefWidth="140.0" text="    " />
+                        <TreeTableColumn fx:id="col_Mus" prefWidth="349.0" text="곡" />
+                        <TreeTableColumn fx:id="col_Its" prefWidth="214.0" text="가수명" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <Pagination fx:id="p_Paging" layoutX="9.0" layoutY="179.0" prefHeight="453.0" prefWidth="704.0" />
+                  <Label fx:id="la_Date" layoutX="19.0" layoutY="32.0" prefHeight="42.0" prefWidth="323.0" text="마이앨범" AnchorPane.leftAnchor="19.0">
+                    
+                  </Label>
+                  <Label fx:id="la_MyAlbName" layoutX="31.0" layoutY="88.0" text="앨범명" AnchorPane.leftAnchor="19.0">
+                    
+                  </Label>
+                  <JFXButton layoutX="193.0" layoutY="124.0" ripplerFill="#9c0000" text="담기">
+                     <graphic>
+                        <FontAwesomeIcon iconName="FOLDER_ALT" size="20" />
+                     </graphic>
+                     
+                  </JFXButton>
+                  <JFXButton layoutX="135.0" layoutY="124.0" ripplerFill="#9c0000" text="추가">
+                     <graphic>
+                        <FontAwesomeIcon iconName="PLUS" size="20" />
+                     </graphic>
+                    
+                  </JFXButton>
+                  <JFXButton layoutX="75.0" layoutY="124.0" ripplerFill="#9c0000" text="듣기">
+                     <graphic>
+                        <FontAwesomeIcon iconName="PLAY_CIRCLE_ALT" size="20" />
+                     </graphic>
+                   
+                  </JFXButton>
+                  <JFXButton onAction="#btn_Cl" layoutX="254.0" layoutY="124.0" ripplerFill="#9c0000" text="삭제">
+                     <graphic>
+                        <FontAwesomeIcon iconName="CLOSE" size="20" />
+                     </graphic>
+                     
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

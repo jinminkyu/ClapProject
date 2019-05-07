@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:controller="kr.or.ddit.clap.view.member.profile.ProfileController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="56.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="프로필 사진" />
+      <Text layoutX="56.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="소개글" />
+      <Text layoutX="226.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="프로필 이미지로 설정할 사진을 선택해주세요. (최대 2MB)" />
+      <Text layoutX="226.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="등록하시면 바로 프로필 사진으로 등록됩니다." />
+      <Text fill="RED" layoutX="226.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="선정적 또는 상업적 이미지 등록 시 관리자에 의해 삭제 될 수 있습니다." />
+      <Button fx:id="btn_sh"  layoutX="576.0" layoutY="185.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="102.0" text="찾아보기" />
+      <TextField layoutX="208.0" layoutY="185.0" prefHeight="29.0" prefWidth="346.0" />
+      <Button layoutX="226.0" layoutY="340.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="115.0" text="설정" />
+      <Button layoutX="396.0" layoutY="340.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="115.0" text="확인" />
+      <TextField layoutX="56.0" layoutY="272.0" prefHeight="39.0" prefWidth="674.0" />
+      <ImageView fx:id="img" fitHeight="150.0" fitWidth="161.0" layoutX="36.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXCheckBox layoutX="700.0" layoutY="190.0" text="삭제" />
+      <JFXButton layoutX="734.0" layoutY="277.0" text="X" />
+   </children>
+</AnchorPane>

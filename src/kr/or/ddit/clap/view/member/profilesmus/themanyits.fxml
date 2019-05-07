@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Head" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="894.0" prefWidth="728.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.member.profilesmus.TheManyItsController">
+   <children>
+      <VBox layoutX="4.0" layoutY="2.0" prefHeight="894.0" prefWidth="720.0">
+         <children>
+            <AnchorPane prefHeight="587.0" prefWidth="720.0">
+               <children>
+                  <JFXCheckBox fx:id="chbox_main" checkedColor="#090948" layoutX="28.0" layoutY="99.0" onAction="#mainCheck" prefHeight="24.0" prefWidth="37.0" text=" " unCheckedColor="#9c0000" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="99.0" />
+                  <JFXTreeTableView fx:id="tbl_ManyIts" layoutX="11.0" layoutY="160.0" prefHeight="400.0" prefWidth="704.0">
+                     <columns>
+                        <TreeTableColumn fx:id="col_Checks" prefWidth="41.0" text="  " />
+                        <TreeTableColumn fx:id="col_Img" prefWidth="132.0" text=" " />
+                        <TreeTableColumn fx:id="col_Its" prefWidth="88.0" text="가수명" />
+                        <TreeTableColumn fx:id="col_DebutDate" prefWidth="106.0" text="데뷔년도" />
+                        <TreeTableColumn fx:id="col_DebutMus" prefWidth="265.0" text="데뷔곡" />
+                        <TreeTableColumn fx:id="col_MusCount" prefWidth="71.0" text="감상횟수" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <Pagination fx:id="p_Paging" layoutX="11.0" layoutY="160.0" prefHeight="451.0" prefWidth="704.0" />
+                  <Label  fx:id="la_mypge" layoutX="19.0" layoutY="32.0" prefHeight="42.0" prefWidth="323.0" text="많이 들은 아티스트" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="32.0">
+                   
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <JFXButton layoutX="61.0" layoutY="100.0" ripplerFill="#9c0000" text="듣기">
+         <graphic>
+            <FontAwesomeIcon iconName="PLAY_CIRCLE_ALT" size="20" />
+         </graphic>
+        
+      </JFXButton>
+      <JFXButton layoutX="121.0" layoutY="100.0" ripplerFill="#9c0000" text="추가">
+         <graphic>
+            <FontAwesomeIcon iconName="PLUS" size="20" />
+         </graphic>
+        
+      </JFXButton>
+      <JFXButton layoutX="179.0" layoutY="100.0" ripplerFill="#9c0000" text="담기">
+         <graphic>
+            <FontAwesomeIcon iconName="FOLDER_ALT" size="20" />
+         </graphic>
+       
+      </JFXButton>
+   </children>
+</AnchorPane>

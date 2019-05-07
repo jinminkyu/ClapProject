@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" minHeight="448.0" prefWidth="1024.0" stylesheets="@../../../../../../../ChartMenu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.chartmenu.main.ChartMenuController">
+   <children>
+      <VBox minHeight="448.0" prefWidth="1024.0" spacing="10.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="40.0" prefWidth="139.0" styleClass="mainlabel" text="CLAP 차트">
+               <font>
+                  <Font name="-윤고딕350" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </Label>
+            <JFXTabPane fx:id="tabPane_main" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="337.0" VBox.vgrow="SOMETIMES">
+               <tabs>
+                  <Tab fx:id="tab_top50" text="TOP50">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1022.0">
+                           <children>
+                              <StackPane fx:id="stackPane_top50" minHeight="0.0" minWidth="0.0" prefWidth="1022.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tab_genre" text="장르별 차트">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1024.0">
+                           <children>
+                              <StackPane fx:id="stackPane_genre" minHeight="0.0" minWidth="0.0" prefWidth="1022.0" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_period" text="시대별 차트">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <StackPane fx:id="stackPane_period" minHeight="0.0" minWidth="0.0" prefWidth="1022.0" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

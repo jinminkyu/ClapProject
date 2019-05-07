@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="448.0" minWidth="-Infinity" prefHeight="768.0" prefWidth="1005.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../../../Notice.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.support.qna.QnaMenuController">
+   <children>
+      <AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="448.0" minWidth="-Infinity" prefHeight="768.0" prefWidth="1005.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../../../Notice.css">
+         <children>
+            <Label layoutX="53.0" layoutY="34.0" text="문의사항" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="YDIYGO350" size="30.0" />
+               </font>
+            </Label>
+            <Pagination fx:id="p_paging" layoutX="121.0" layoutY="126.0" prefHeight="452.0" prefWidth="766.0" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="80.0" />
+            <JFXTreeTableView fx:id="tbl_qna" layoutX="78.0" layoutY="160.0" prefHeight="400.0" prefWidth="766.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="80.0">
+               <columns>
+                  <TreeTableColumn fx:id="col_qnaNumber" prefWidth="52.0" />
+                  <TreeTableColumn fx:id="col_qnaTitle" prefWidth="400.0" text="제  목" />
+                  <TreeTableColumn fx:id="col_qnaId" prefWidth="128.0" text="작성자" />
+                  <TreeTableColumn fx:id="col_qnaDate" prefWidth="111.0" text="등록일" />
+                  <TreeTableColumn fx:id="col_qnaViewCnt" prefWidth="74.0" text="조회수" />
+               </columns>
+            </JFXTreeTableView>
+            <JFXButton id="btn" fx:id="btn_ins" layoutX="802.0" layoutY="532.0" text="문의 글 작성" AnchorPane.leftAnchor="802.0" AnchorPane.rightAnchor="119.0" AnchorPane.topAnchor="532.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

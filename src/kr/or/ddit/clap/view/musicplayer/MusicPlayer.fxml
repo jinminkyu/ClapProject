@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="880.0" style="-fx-background-color: white;" stylesheets="@../../../../../../musicplayer.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.musicplayer.MusicPlayerController">
+   <children>
+      <StackPane prefHeight="690.0" prefWidth="434.0">
+         <children>
+            <ImageView fitHeight="690.0" fitWidth="440.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../../../img/playermain.jpg" />
+               </image>
+               <effect>
+                  <MotionBlur radius="63.0" />
+               </effect>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane layoutX="43.0" layoutY="164.0" prefHeight="265.0" prefWidth="348.0">
+         <children>
+            <ImageView fx:id="imgview_album" cache="true" cacheHint="ROTATE" disable="true" fitHeight="230.0" fitWidth="228.0" pickOnBounds="true">
+               <image>
+                  <Image url="file:\\Sem-pc\공유폴더\Clap\img\album\제목없음.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <HBox prefHeight="690.0" prefWidth="880.0">
+         <children>
+            <VBox alignment="TOP_CENTER" focusTraversable="true" prefWidth="440.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Label fx:id="label_musicName" text="재생 목록이 없습니다" textFill="WHITE">
+                     <font>
+                        <Font name="-윤고딕350" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="label_singerName" text="듣고 싶은 곡을 선택해 보세요!" textFill="WHITE">
+                     <font>
+                        <Font name="-윤고딕340" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin></Label>
+                  <ScrollPane fx:id="scroll_lyrics" hbarPolicy="NEVER" opacity="0.6" prefHeight="234.0" prefWidth="440.0" vbarPolicy="ALWAYS" visible="false">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="440.0">
+                           <children>
+                              <Label fx:id="label_lyrics" alignment="CENTER" contentDisplay="CENTER" prefWidth="405.0" text="label" wrapText="true" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <VBox.margin>
+                        <Insets top="44.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+                  <JFXSlider fx:id="slider_time" value="0.0">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </JFXSlider>
+                  <HBox>
+                     <children>
+                        <Label fx:id="Label_nowTime" text="00:00" textFill="WHITE">
+                           <font>
+                              <Font name="-윤고딕350" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Label_finalTime" text="00:00" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="345.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="-윤고딕350" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXSlider onMouseExited="#MouseExit" fx:id="slider_volum" orientation="VERTICAL" prefHeight="46.0" prefWidth="14.0" visible="false">
+                     <VBox.margin>
+                        <Insets left="240.0" />
+                     </VBox.margin>
+                  </JFXSlider>
+                  <HBox alignment="CENTER_LEFT">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#retweetClick" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text="">
+                           <graphic>
+                              <FontAwesomeIcon fx:id="icon_retweet" fill="WHITE" iconName="RETWEET" size="30" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets bottom="4.0" left="28.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#randomClick" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text="">
+                           <graphic>
+                              <FontAwesomeIcon fx:id="icon_random" fill="WHITE" iconName="RANDOM" size="30" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="28.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#backWard" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text="">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="BACKWARD" size="30" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="28.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onPlay" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text="">
+                           <graphic>
+                              <FontAwesomeIcon fx:id="icon_play" fill="WHITE" iconName="PLAY" size="30" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="28.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#forWard" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text="">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="FORWARD" size="30" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="28.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton onMouseEntered="#mouseEnter"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text="">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="VOLUME_UP" size="30" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="28.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#lyricsClick" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text="">
+                           <graphic>
+                              <FontAwesomeIcon fx:id="icon_lyrics" fill="WHITE" iconName="BARS" size="30" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="28.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefWidth="440.0">
+               <children>
+                  <HBox alignment="CENTER" opacity="0.6" prefHeight="30.0" style="-fx-background-color: #090948;">
+                     <children>
+                        <Label fx:id="label_loginid" text="로그인을 해주세요" textFill="WHITE">
+                           <font>
+                              <Font name="-윤고딕330" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXTabPane fx:id="tabpane_main" tabMinWidth="214.0" VBox.vgrow="SOMETIMES">
+                     <tabs>
+                        <Tab text="PlayList">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <JFXTreeTableView fx:id="t_playListTable" minHeight="590.0" prefHeight="590.0" prefWidth="438.0">
+                                       <columns>
+                                          <TreeTableColumn fx:id="tcol_playListCheck" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                                          <TreeTableColumn fx:id="tcol_playListVbox" maxWidth="395.0" prefWidth="395.0" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </JFXTreeTableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="MyAlbum">
+                          <content>
+                            <AnchorPane fx:id="anchorpane_myalbum" minHeight="0.0" minWidth="0.0" />
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+                  <HBox alignment="CENTER_LEFT" opacity="0.6" prefHeight="30.0" style="-fx-background-color: #090948;">
+                     <children>
+                        <JFXCheckBox fx:id="btn_check" checkedColor="BLACK" onAction="#allCheck" text=" ">
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                        </JFXCheckBox>
+                        <JFXButton fx:id="btn_add" onAction="#playListAdd" text="추가" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="PLUS" size="30" />
+                           </graphic>
+                           <font>
+                              <Font name="-윤고딕330" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_del" onAction="#playListDelete" text="삭제" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="CLOSE" size="30" />
+                           </graphic>
+                           <font>
+                              <Font name="-윤고딕330" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="220.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

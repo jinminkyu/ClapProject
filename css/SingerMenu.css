@@ -1,0 +1,57 @@
+* {
+  
+}
+
+#main{
+	-fx-background-color: white;
+}
+
+.tab{
+	-fx-background-color: #090948;
+	
+}
+
+.tab-header-background{
+	-fx-background-color: #090948;
+	
+}
+
+.tab-label{
+    -fx-font-family: "-윤고딕320";
+    -fx-font-size: 18;
+}
+
+.mainlabel{
+	 -fx-font-family: "-윤고딕350";
+	 -fx-font-size: 25;
+	 
+}
+
+.tab:selected{
+	-fx-border-width: 0 0 5 0;
+	-fx-border-color: #9c0000;
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+    -fx-text-fill: white;
+   
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected {
+    -fx-background-color: #9c0000;
+    -fx-table-cell-border-color: #9c0000;
+    
+}
+.tree-table-row-cell{
+	-fx-font-family: "-윤고딕330";
+}
+
+.tree-table-view .column-header{
+    -fx-background-color: white;
+    -fx-border-color: #c9c9c9;
+    -fx-font-family: "-윤고딕330";
+}
+
+.button{
+	 -fx-font-family: "-윤고딕330";
+}

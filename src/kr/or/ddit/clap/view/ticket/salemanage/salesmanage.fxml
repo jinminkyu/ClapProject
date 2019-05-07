@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contents" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1005.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../../../table.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.ticket.salemanage.SalesMangeController">
+   <children>
+      <AnchorPane fx:id="main" layoutX="234.0" layoutY="3.0" prefHeight="768.0" prefWidth="773.0" AnchorPane.leftAnchor="234.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label id="header_font" layoutX="23.0" layoutY="49.0" prefHeight="51.0" prefWidth="298.0" text="매출 관리" AnchorPane.topAnchor="11.0" />
+            <Pagination fx:id="p_paging" layoutX="23.0" layoutY="180.0" prefHeight="432.0" prefWidth="715.0" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="180.0" />
+            <JFXTreeTableView fx:id="tbl_sales" layoutX="23.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="382.0" prefWidth="715.0" AnchorPane.topAnchor="180.0">
+               <columns>
+                  <TreeTableColumn fx:id="col_Buyuser" prefWidth="153.0" text="구매자" />
+                  <TreeTableColumn fx:id="col_saleDate" prefWidth="190.0" text="구매일수" />
+                  <TreeTableColumn fx:id="col_TictekNo" minWidth="0.0" prefWidth="151.0" text="구매한 이용권" />
+                  <TreeTableColumn fx:id="col_Price" prefWidth="118.0" text="가격" />
+                  <TreeTableColumn fx:id="col_BuyType" prefWidth="102.0" text="결제방법" />
+               </columns>
+            </JFXTreeTableView>
+            <JFXDatePicker fx:id="date_Start" defaultColor="#9c0000" layoutX="107.0" layoutY="95.0" />
+            <JFXDatePicker fx:id="date_End" defaultColor="#9c0000" layoutX="412.0" layoutY="95.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="307.0" layoutY="89.0" prefHeight="42.0" prefWidth="68.0" text="~">
+               <font>
+                  <Font size="36.0" />
+               </font></Label>
+            <JFXComboBox fx:id="combo_Ticket" layoutX="113.0" layoutY="137.0" prefHeight="29.0" prefWidth="127.0" AnchorPane.leftAnchor="113.0" AnchorPane.topAnchor="137.0" />
+            <Label layoutX="24.0" layoutY="102.0" text="조회기간" />
+            <JFXButton layoutX="620.0" layoutY="614.0" onAction="#graph" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #090948;" text="Graph" textFill="WHITE" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="614.0" />
+            <JFXButton layoutX="257.0" layoutY="137.0" onAction="#btn_Search" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: #090948;" text="조회    " textFill="WHITE" />
+            <FontAwesomeIcon fill="WHITE" iconName="SEARCH" layoutX="313.0" layoutY="158.0" size="1.32em" wrappingWidth="13.142857551574707" />
+         </children>
+      </AnchorPane>
+      <VBox layoutX="30.0" layoutY="75.0" prefHeight="668.0" prefWidth="189.0" style="-fx-border-color: #9c0000; -fx-background-color:#090948;" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <AnchorPane prefHeight="187.0" prefWidth="187.0">
+               <children>
+                  <ImageView fx:id="imgeview" fitHeight="138.0" fitWidth="127.0" layoutX="32.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="25.0" />
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="85.0" prefWidth="191.0">
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <Label id="label_name" fx:id="session_id" alignment="CENTER" prefHeight="15.0" prefWidth="247.0" text="관리자" textFill="WHITE" BorderPane.alignment="CENTER" />
+                     </top>
+                  </BorderPane>
+               </children>
+            </VBox>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#MemManag" prefHeight="41.0" prefWidth="250.0" text="회원 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="-20.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#SingManag" prefHeight="41.0" prefWidth="260.0" text="가수 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#AlbManag" prefHeight="41.0" prefWidth="271.0" text=" 앨범 관리 " textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#MusManag" prefHeight="41.0" prefWidth="296.0" text="곡 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#Recommen" prefHeight="41.0" prefWidth="370.0" text="추천 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#Event" prefHeight="41.0" prefWidth="320.0" text="Event 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#Sales" prefHeight="41.0" prefWidth="303.0" text="매출 관리" textFill="#9c0000">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

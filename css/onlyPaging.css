@@ -1,0 +1,14 @@
+
+.pagination .toggle-button {
+	
+	-fx-background-radius:15px;
+	-fx-background-color:white;
+	
+}
+
+.pagination .toggle-button:selected{
+	-fx-background-radius:15px;
+	-fx-background-color:#9c0000;
+}
+
+

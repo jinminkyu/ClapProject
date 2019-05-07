@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="all" prefHeight="768.0" prefWidth="1024.0" stylesheets="@../../../../../MusicMain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.main.MusicMainController">
+   <content>
+      <VBox fx:id="vbox" style="-fx-background-color: #fff;">
+         <children>
+            <AnchorPane fx:id="menu" prefHeight="170.0" prefWidth="1005.0">
+               <children>
+                  <JFXButton fx:id="btn_logout" layoutX="886.0" layoutY="123.0" onAction="#logout" style="-fx-background-color: #090948;" text="로그아웃" textFill="WHITE" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="123.0" />
+                  <VBox layoutX="52.0" layoutY="76.0" prefHeight="73.0" prefWidth="170.0">
+                     <children>
+                        <ImageView fx:id="logo_imgView" fitHeight="73.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+                  <StackPane layoutX="42.0" layoutY="63.0" prefHeight="97.0" prefWidth="190.0">
+                     <children>
+                        <JFXButton alignment="CENTER" onMouseClicked="#firstPage" prefHeight="97.0" prefWidth="190.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <JFXButton fx:id="btn_join" layoutX="889.0" layoutY="123.0" onAction="#join" style="-fx-background-color: #090948;" text="회원가입" textFill="WHITE" />
+                  <JFXButton fx:id="btn_login" layoutX="833.0" layoutY="123.0" onAction="#login" style="-fx-background-color: #090948;" text="로그인" textFill="WHITE" />
+                  <JFXTextField fx:id="txt_search" layoutX="266.0" layoutY="81.0" onMouseEntered="#searchEnteredMouse" onMouseExited="#searchExitedMouse" prefColumnCount="50" prefWidth="429.0" unFocusColor="#9c0000">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#e40377" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+                  <HBox fx:id="mem_menu" layoutX="786.0" layoutY="86.0" prefHeight="40.0" prefWidth="165.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" minHeight="36.0" onMouseClicked="#mypage" prefHeight="40.0" prefWidth="180.0" spacing="5.0">
+                           <children>
+                              <ImageView fx:id="mem_img" fitHeight="33.0" fitWidth="33.0" onMouseClicked="#mypage" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="lb_id" alignment="CENTER" onMouseClicked="#mypage" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #090948; -fx-background-radius: 4;" text="ddddit님" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="8.0" top="9.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <StackPane fx:id="mem_pane" layoutX="786.0" layoutY="85.0" prefHeight="36.0" prefWidth="165.0">
+                     <children>
+                        <JFXButton fx:id="btn_mem" onAction="#mypage" prefHeight="41.0" prefWidth="180.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <MenuBar fx:id="bar" layoutX="275.0" layoutY="123.0" style="-fx-background-color: #090948; -fx-color: #000;">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="차트">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#top50PageChange" text="TOP50" />
+                              <MenuItem mnemonicParsing="false" onAction="#genrePageChange" text="장르별" />
+                              <MenuItem mnemonicParsing="false" onAction="#periodPageChange" text="시대별" />
+                            
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="최신음악">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#musicPageChange" text="앨범" />
+                              <MenuItem mnemonicParsing="false" onAction="#albumPageChange" text="곡" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="장르음악">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#songPageChange" text="가요" />
+                              <MenuItem mnemonicParsing="false" onAction="#popPageChange" text="POP" />
+                              <MenuItem mnemonicParsing="false" onAction="#ostPageChange" text="OST" />
+                              <MenuItem mnemonicParsing="false" onAction="#otherPageChange" text="그 외 장르" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="추천">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#hotRcmList" text="추천" />
+                              <MenuItem mnemonicParsing="false" onAction="#BestRcmList" text="인기" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="공지사항">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#notice" text="공지사항" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="문의사항">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#qna" text="문의사항" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="이벤트">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#event" text="Event" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="menu_admin" mnemonicParsing="false" text="관리자모드" visible="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#memManage" text="회원 관리" />
+                              <MenuItem fx:id="item_SigerManage" mnemonicParsing="false" onAction="#singerManage" text="가수 관리" />
+                              <MenuItem mnemonicParsing="false" onAction="#albumManage" text="앨범 관리" />
+                              <MenuItem mnemonicParsing="false" onAction="#musicManage" text="곡 관리" />
+                              <MenuItem mnemonicParsing="false" onAction="#recommendManage" text="추천 관리" />
+                              <MenuItem mnemonicParsing="false" onAction="#eventManage" text="Event 관리" />
+                              <MenuItem mnemonicParsing="false" onAction="#salesMange" text="매출 관리" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <FontAwesomeIcon iconName="SEARCH" layoutX="706.0" layoutY="100.0" size="1.5em" />
+                  <JFXButton layoutX="698.0" layoutY="77.0" minHeight="35.0" minWidth="35.0" onAction="#searchClick" text=" " />
+                  <JFXButton layoutX="837.0" layoutY="14.0" maxHeight="23.0" onAction="#musicPlayer" prefHeight="23.0" style="-fx-background-color: #090948;" text="  MusicPlayer " textFill="WHITE">
+                     <graphic>
+                        <HBox alignment="CENTER" prefHeight="23.0" prefWidth="15.0">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="MUSIC" size="15">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                           </children>
+                        </HBox>
+                     </graphic></JFXButton>
+                  <JFXButton fx:id="btn_goback" layoutX="52.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" prefHeight="23.0" prefWidth="24.0" style="-fx-background-color: #090948;" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="ARROW_LEFT" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_goforward" layoutX="82.0" layoutY="14.0" mnemonicParsing="false" onAction="#goforward" prefHeight="23.0" prefWidth="24.0" style="-fx-background-color: #090948;" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="ARROW_RIGHT" />
+                     </graphic>
+                  </JFXButton>
+                  <FontAwesomeIcon fx:id="icon_msg" fill="#9c0000" iconName="COMMENT" layoutX="814.0" layoutY="84.0" size="2.3em" wrappingWidth="21.0" />
+                  <Label fx:id="la_messageCnt" alignment="CENTER" layoutX="815.0" layoutY="63.0" prefHeight="21.0" prefWidth="26.0" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="YDIYGO350" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btn_msg" layoutX="802.0" layoutY="58.0" onAction="#btn_message" prefHeight="32.0" prefWidth="53.0" text=" " />
+                  <Line endX="1024.0" endY="170.0" startY="170.0" stroke="#aeaeae" />
+                  <JFXButton fx:id="btn_ticket" layoutX="112.0" layoutY="14.0" maxHeight="23.0" onAction="#buyTicket" prefHeight="23.0" style="-fx-background-color: #090948;" text=" 이용권 구매 " textFill="WHITE">
+                     <graphic>
+                        <HBox alignment="CENTER" prefHeight="23.0" prefWidth="15.0">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="TICKET" size="15">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="contents" minHeight="448.0" prefWidth="1005.0">
+               <children>
+                  <JFXButton layoutX="189.0" layoutY="20.0" text="국외" visible="false" />
+                  <JFXButton layoutX="150.0" layoutY="20.0" text="국내" visible="false" />
+                  <Label fx:id="lb_new" layoutX="55.0" layoutY="14.0" text="최신음악" />
+                  <VBox layoutX="52.0" layoutY="53.0" maxHeight="357.0" minHeight="357.0" prefHeight="324.0" prefWidth="900.0">
+                     <children>
+                        <HBox minHeight="176.0" minWidth="816.0" prefWidth="373.0" spacing="5.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="new1" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="new2" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="new3" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="new4" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="new5" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                        <HBox minHeight="176.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <ImageView fx:id="new6" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="new7" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="new8" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="new9" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="new10" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <StackPane layoutX="52.0" layoutY="53.0" maxHeight="357.0" maxWidth="-Infinity" minHeight="324.0" minWidth="816.0" prefHeight="400.0" prefWidth="900.0">
+                     <children>
+                        <VBox prefHeight="316.0" prefWidth="796.0">
+                           <children>
+                              <HBox minHeight="176.0" prefWidth="373.0" spacing="5.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXButton fx:id="btn_new1" minHeight="176.0" minWidth="176.0" text=" " />
+                                    <JFXButton fx:id="btn_new2" minHeight="176.0" minWidth="176.0" text=" " />
+                                    <JFXButton fx:id="btn_new3" minHeight="176.0" minWidth="176.0" text=" " />
+                                    <JFXButton fx:id="btn_new4" minHeight="176.0" minWidth="176.0" text=" " />
+                                    <JFXButton fx:id="btn_new5" minHeight="176.0" minWidth="176.0" text=" " />
+                                 </children>
+                              </HBox>
+                              <HBox minHeight="176.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <JFXButton fx:id="btn_new6" minHeight="176.0" minWidth="176.0" text=" " />
+                                    <JFXButton fx:id="btn_new7" minHeight="176.0" minWidth="176.0" text=" " />
+                                    <JFXButton fx:id="btn_new8" minHeight="176.0" minWidth="176.0" text=" " />
+                                    <JFXButton fx:id="btn_new9" minHeight="176.0" minWidth="176.0" text=" " />
+                                    <JFXButton fx:id="btn_new10" minHeight="176.0" minWidth="176.0" text=" " />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <JFXTabPane fx:id="tabpane" layoutX="555.0" layoutY="484.0" maxHeight="398.0" maxWidth="398.0" minHeight="518.0" minWidth="398.0" style="-fx-border-color: #d3d3d3;">
+                     <tabs>
+                        <Tab fx:id="tab1" text="   #1    ">
+                          <content>
+                            <AnchorPane fx:id="tab_pane1" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="tabImg1" fitHeight="398.0" fitWidth="398.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" />
+                                    <StackPane minHeight="398.0" minWidth="398.0" prefHeight="212.0" prefWidth="268.0">
+                                       <children>
+                                          <JFXButton fx:id="btn_rec1" minHeight="398.0" minWidth="398.0" text=" " />
+                                       </children>
+                                    </StackPane>
+                                    <VBox fx:id="editorBox1" alignment="CENTER_LEFT" layoutY="358.0" prefHeight="130.0" prefWidth="398.0" spacing="10.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <VBox maxHeight="50.0" minHeight="80.0" prefHeight="50.0" prefWidth="386.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" minHeight="80.0" minWidth="388.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" minHeight="80.0" minWidth="80.0">
+                                                         <children>
+                                                            <FontAwesomeIcon fx:id="icon1" fill="#090948" iconName="GITHUB_ALT" size="60" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER_LEFT" maxHeight="80.0" minHeight="80.0" spacing="5.0">
+                                                         <children>
+                                                            <Label fx:id="lbb1" text="당신의 내적 그루브와 감" textFill="#090948">
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="lbb2" text="성을 자극할 음악들" textFill="#090948" />
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="25.0" maxWidth="307.0" minHeight="25.0" minWidth="307.0" prefHeight="25.0" prefWidth="307.0" spacing="10.0">
+                                             <children>
+                                                <FontAwesomeIcon fill="RED" iconName="HEART" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb1" text="33" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                                <FontAwesomeIcon fill="#04ff00" iconName="MUSIC" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb2" text="3곡" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="tab2" text="  #2   ">
+                           <content>
+                              <AnchorPane fx:id="tab_pane2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="tabImg2" fitHeight="398.0" fitWidth="398.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" />
+                                    <StackPane minHeight="398.0" minWidth="398.0" prefHeight="212.0" prefWidth="268.0">
+                                       <children>
+                                          <JFXButton fx:id="btn_rec2" minHeight="398.0" minWidth="398.0" text=" " />
+                                       </children>
+                                    </StackPane>
+                                    <VBox fx:id="editorBox11" alignment="CENTER_LEFT" layoutY="358.0" prefHeight="130.0" prefWidth="398.0" spacing="10.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <VBox maxHeight="50.0" minHeight="80.0" prefHeight="50.0" prefWidth="386.0">
+                                             <children>
+                                                <HBox minHeight="80.0" minWidth="388.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" minHeight="80.0" minWidth="80.0">
+                                                         <children>
+                                                            <FontAwesomeIcon fx:id="icon2" fill="#090948" iconName="BED" size="55" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="200.0" spacing="5.0">
+                                                         <children>
+                                                            <Label fx:id="lbb3" text="생각은 접어두고 잠시 쉬" textFill="#090948" />
+                                                            <Label fx:id="lbb4" text="고싶은 그런 날." textFill="#090948" />
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="25.0" maxWidth="307.0" minHeight="25.0" minWidth="307.0" prefHeight="25.0" prefWidth="307.0" spacing="10.0">
+                                             <children>
+                                                <FontAwesomeIcon fill="RED" iconName="HEART" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb3" text="33" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                                <FontAwesomeIcon fill="#04ff00" iconName="MUSIC" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb4" text="3곡" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="tab3" text="   #3   ">
+                           <content>
+                              <AnchorPane fx:id="tab_pane3" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="tabImg3" fitHeight="398.0" fitWidth="398.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" />
+                                    <StackPane minHeight="398.0" minWidth="398.0" prefHeight="212.0" prefWidth="268.0">
+                                       <children>
+                                          <JFXButton fx:id="btn_rec3" minHeight="398.0" minWidth="398.0" text=" " />
+                                       </children>
+                                    </StackPane>
+                                    <VBox fx:id="editorBox12" alignment="CENTER_LEFT" layoutY="358.0" prefHeight="130.0" prefWidth="398.0" spacing="10.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <VBox maxHeight="50.0" minHeight="80.0" prefHeight="50.0" prefWidth="386.0">
+                                             <children>
+                                                <HBox minHeight="80.0" minWidth="388.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" minHeight="80.0" minWidth="80.0">
+                                                         <children>
+                                                            <FontAwesomeIcon fx:id="icon3" fill="#090948" iconName="CAR" size="55" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="200.0" spacing="5.0">
+                                                         <children>
+                                                            <Label fx:id="lbb5" text="흥겨운 분위기를 위한 기" textFill="#090948" />
+                                                            <Label fx:id="lbb6" text="분 UP 플레이!" textFill="#090948" />
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="25.0" maxWidth="307.0" minHeight="25.0" minWidth="307.0" prefHeight="25.0" prefWidth="307.0" spacing="10.0">
+                                             <children>
+                                                <FontAwesomeIcon fill="RED" iconName="HEART" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb5" text="33" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                                <FontAwesomeIcon fill="#04ff00" iconName="MUSIC" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb6" text="3곡" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="tab4" text="   #4  ">
+                           <content>
+                              <AnchorPane fx:id="tab_pane4" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="tabImg4" fitHeight="398.0" fitWidth="398.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" />
+                                    <StackPane minHeight="398.0" minWidth="398.0" prefHeight="212.0" prefWidth="268.0">
+                                       <children>
+                                          <JFXButton fx:id="btn_rec4" minHeight="398.0" minWidth="398.0" text=" " />
+                                       </children>
+                                    </StackPane>
+                                    <VBox fx:id="editorBox13" alignment="CENTER_LEFT" layoutY="358.0" prefHeight="130.0" prefWidth="398.0" spacing="10.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <VBox maxHeight="50.0" minHeight="80.0" prefHeight="50.0" prefWidth="386.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" minHeight="80.0" minWidth="388.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" minHeight="80.0" minWidth="80.0">
+                                                         <children>
+                                                            <FontAwesomeIcon fx:id="icon4" fill="#090948" iconName="REDDIT" size="55" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="200.0" spacing="5.0">
+                                                         <children>
+                                                            <Label fx:id="lbb7" text="오늘은 그대와 나태한" textFill="#090948" />
+                                                            <Label fx:id="lbb8" text="하루 보내기" textFill="#090948" />
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="25.0" maxWidth="307.0" minHeight="25.0" minWidth="307.0" prefHeight="25.0" prefWidth="307.0" spacing="10.0">
+                                             <children>
+                                                <FontAwesomeIcon fill="RED" iconName="HEART" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb7" text="33" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                                <FontAwesomeIcon fill="#04ff00" iconName="MUSIC" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb8" text="3곡" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="tab5" text="   #5  ">
+                           <content>
+                              <AnchorPane fx:id="tab_pane5" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="tabImg5" fitHeight="398.0" fitWidth="398.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" />
+                                    <StackPane minHeight="398.0" minWidth="398.0" prefHeight="212.0" prefWidth="268.0">
+                                       <children>
+                                          <JFXButton fx:id="btn_rec5" minHeight="398.0" minWidth="398.0" text=" " />
+                                       </children>
+                                    </StackPane>
+                                    <VBox fx:id="editorBox14" alignment="CENTER_LEFT" layoutY="358.0" prefHeight="130.0" prefWidth="398.0" spacing="10.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <VBox maxHeight="50.0" minHeight="80.0" prefHeight="50.0" prefWidth="398.0">
+                                             <children>
+                                                <HBox fx:id="rcm_box5" minHeight="80.0" minWidth="388.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" minHeight="80.0" minWidth="80.0">
+                                                         <children>
+                                                            <FontAwesomeIcon fx:id="icon5" fill="#090948" iconName="ANGELLIST" size="60" />
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="302.0" spacing="5.0">
+                                                         <children>
+                                                            <Label fx:id="lbb9" text="그대가 그립거나 그때가" textFill="#090948" />
+                                                            <Label fx:id="lbb10" text="그립거나" textFill="#090948" />
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="25.0" maxWidth="307.0" minHeight="25.0" minWidth="307.0" prefHeight="25.0" prefWidth="307.0" spacing="10.0">
+                                             <children>
+                                                <FontAwesomeIcon fill="RED" iconName="HEART" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb9" text="33" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                                <FontAwesomeIcon fill="#04ff00" iconName="MUSIC" size="25">
+                                                   <HBox.margin>
+                                                      <Insets bottom="15.0" left="25.0" />
+                                                   </HBox.margin>
+                                                </FontAwesomeIcon>
+                                                <Label fx:id="lbbb10" text="3곡" textFill="#090948">
+                                                   <HBox.margin>
+                                                      <Insets bottom="16.0" />
+                                                   </HBox.margin></Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+                  <Line endX="951.0" endY="175.0" layoutY="258.0" startX="51.0" startY="175.0" stroke="#aeaeae" />
+                  <Label fx:id="lb_chart" layoutX="50.0" layoutY="443.0" text="실시간 차트" />
+                  <StackPane fx:id="stackpane" alignment="CENTER_LEFT" layoutX="-60.0" layoutY="486.0" prefWidth="611.0">
+                     <children>
+                        <VBox fx:id="mainBox" maxWidth="610.0" minWidth="600.0" prefHeight="80.0" prefWidth="580.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" minWidth="510.0" prefHeight="35.0" prefWidth="510.0" spacing="1.0">
+                                 <children>
+                                    <JFXCheckBox fx:id="cb_main" checkedColor="#9c0000" onAction="#mainCheck" prefHeight="35.0" prefWidth="39.0" text=" " />
+                                    <JFXButton onAction="#btnMainPlay" ripplerFill="#9c0000" text="듣기">
+                                       <graphic>
+                                          <FontAwesomeIcon iconName="PLAY_CIRCLE_ALT" size="20" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="-윤고딕340" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton onAction="#btnMainAdd" ripplerFill="#9c0000" text="추가">
+                                       <graphic>
+                                          <FontAwesomeIcon iconName="PLUS" size="20" />
+                                       </graphic>
+                                       <font>
+                                          <Font name="-윤고딕330" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton onAction="#btnMainPut" ripplerFill="#9c0000" text="담기">
+                                       <graphic>
+                                          <FontAwesomeIcon iconName="FOLDER_ALT" size="20" />
+                                       </graphic>
+                                       <font>
+                                          <Font name="-윤고딕330" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="70.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox fx:id="chart_box" alignment="CENTER_LEFT" maxWidth="602.0" minWidth="555.0" prefHeight="15.0" prefWidth="602.0" spacing="20.0">
+                                 <children>
+                                    <Label fx:id="lb_chart1" text="순위">
+                                       <font>
+                                          <Font name="-윤고딕320" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="70.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lb_chart2" text="곡정보">
+                                       <font>
+                                          <Font name="-윤고딕320" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="61.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lb_chart3" text="듣기">
+                                       <font>
+                                          <Font name="-윤고딕320" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="105.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lb_chart4" text="추가">
+                                       <font>
+                                          <Font name="-윤고딕320" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lb_chart5" text="담기">
+                                       <font>
+                                          <Font name="-윤고딕320" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lb_chart6" text="뮤비">
+                                       <font>
+                                          <Font name="-윤고딕320" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="60.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <VBox layoutX="555.0" layoutY="439.0" prefHeight="34.0" prefWidth="398.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label fx:id="lb_editor" text="에디터 추천 ">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label layoutX="92.0" layoutY="1100.0" text="HOT &amp; NEW" visible="false" />
+                  <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="696.0" layoutY="1120.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@image.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="389.0" layoutY="1120.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@image.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="76.0" layoutY="1120.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@image.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="99.0" layoutY="1242.0" text="음악 보기" visible="false" />
+                  <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="703.0" layoutY="1262.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@image.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="396.0" layoutY="1262.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@image.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="83.0" layoutY="1262.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@image.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="512.0" endY="175.0" layoutX="10.0" layoutY="311.0" startX="41.0" startY="175.0" />
+                  <Line endX="512.0" endY="175.0" layoutX="10.0" layoutY="1072.0" startX="41.0" startY="175.0" />
+                  <AnchorPane fx:id="achorpane_game" layoutX="555.0" layoutY="1025.0" prefHeight="223.0" prefWidth="398.0" />
+                  <AnchorPane fx:id="pane_search" layoutX="276.0" layoutY="-56.0" onMouseEntered="#pane_searchMouseEnterd" onMouseExited="#pane_searchMouseExited" prefHeight="295.0" prefWidth="261.0" style="-fx-background-color: #fff; -fx-border-color: #090948;" visible="false">
+                     <children>
+                        <JFXButton fx:id="btn_bestWord" layoutX="2.0" layoutY="2.0" onAction="#btn_bestWord" prefHeight="34.0" prefWidth="129.0" style="-fx-background-color: #fff; -fx-border-color: #fff;" text="인기검색어" />
+                        <JFXButton fx:id="btn_newWord" layoutX="129.0" layoutY="2.0" onAction="#btn_newWord" prefHeight="34.0" prefWidth="129.0" style="-fx-background-color: #f0f0f0; -fx-border-color: #d3d3d3;" text="최근검색어" />
+                        <JFXTreeTableView fx:id="tbl_search" layoutX="1.0" layoutY="35.0" prefHeight="279.0" prefWidth="255.0">
+                           <columns>
+                              <TreeTableColumn fx:id="col_word" prefWidth="257.0" text=" " />
+                           </columns>
+                        </JFXTreeTableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="1005.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="105.0" layoutY="22.0" text="회사소개" AnchorPane.topAnchor="22.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="210.0" layoutY="22.0" text="이용약관">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="320.0" layoutY="22.0" text="개인정보처리방침">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="473.0" layoutY="22.0" text="청소년보호정책" AnchorPane.topAnchor="22.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="613.0" layoutY="22.0" text="이메일주소무단수집거부" AnchorPane.topAnchor="22.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="801.0" layoutY="22.0" text="서비스 이용문의" AnchorPane.rightAnchor="108.0" AnchorPane.topAnchor="22.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="image_logo" fitHeight="45.0" fitWidth="120.0" layoutX="103.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="124.0" AnchorPane.leftAnchor="103.0" AnchorPane.topAnchor="61.0" />
+                  <Label layoutX="227.0" layoutY="58.0" text="대표이사 윤한수 | 진민규 | 박경훈 | 김현지 | 이한화" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="58.0" />
+                  <Line endX="-100.0" endY="19.0" layoutX="283.0" layoutY="19.5" startX="-100.0" startY="3.0" stroke="#a1a0a0" AnchorPane.topAnchor="22.0" />
+                  <Label layoutX="535.0" layoutY="58.0" text="대전광역시 중구 중앙로 76 영민빌딩 2" AnchorPane.topAnchor="58.0" />
+                  <Label layoutX="398.0" layoutY="75.0" text="사업자등록번호 314-82-04354" AnchorPane.topAnchor="75.0" />
+                  <Label layoutX="608.0" layoutY="75.0" text="통신판매일신고 2013-서울강남-01302" AnchorPane.topAnchor="75.0" />
+                  <Label layoutX="226.0" layoutY="75.0" text="개인정보관리책임자 본부장" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="75.0" />
+                  <Label layoutX="775.0" layoutY="56.0" text="문의전화 1577-5337" AnchorPane.bottomAnchor="156.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="56.0" />
+                  <Label layoutX="228.0" layoutY="95.0" text="COPYRIGHTⓒGENIE MUSIC CORP ALL RIGHTS RESERVED." AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="226.0" />
+                  <ImageView fx:id="image_footer" fitHeight="89.0" fitWidth="790.0" layoutX="28.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="103.0" />
+                  <Line endX="-100.0" endY="19.0" layoutX="393.0" layoutY="19.5" startX="-100.0" startY="3.0" stroke="#a1a0a0" AnchorPane.topAnchor="22.0" />
+                  <Line endX="-100.0" endY="19.0" layoutX="550.0" layoutY="19.5" startX="-100.0" startY="3.0" stroke="#a1a0a0" AnchorPane.topAnchor="22.0" />
+                  <Line endX="-100.0" endY="19.0" layoutX="690.0" layoutY="19.5" startX="-100.0" startY="3.0" stroke="#a1a0a0" AnchorPane.topAnchor="22.0" />
+                  <Line endX="-100.0" endY="19.0" layoutX="882.0" layoutY="19.5" startX="-100.0" startY="3.0" stroke="#a1a0a0" AnchorPane.topAnchor="22.0" />
+                  <Line endX="-100.0" endY="19.0" layoutX="691.0" layoutY="70.0" startX="-100.0" startY="7.0" stroke="#a1a0a0" AnchorPane.topAnchor="76.5" />
+                  <Line endX="-100.0" endY="19.0" layoutX="862.0" layoutY="53.0" startX="-100.0" startY="7.0" stroke="#a1a0a0" AnchorPane.topAnchor="59.5" />
+                  <Line endX="-100.0" endY="19.0" layoutX="486.0" layoutY="70.0" startX="-100.0" startY="7.0" stroke="#a1a0a0" AnchorPane.bottomAnchor="140.5" AnchorPane.topAnchor="76.5" />
+                  <Line endX="-100.0" endY="19.0" layoutX="619.0" layoutY="53.0" startX="-100.0" startY="7.0" stroke="#a1a0a0" AnchorPane.bottomAnchor="157.5" AnchorPane.topAnchor="59.5" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

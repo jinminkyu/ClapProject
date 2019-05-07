@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.member.mypageCh.MypageJoinOutController">
+   <children>
+      <Text layoutX="134.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원탈퇴를 하시면 음악감상 ,다운로드 등의 CLAP 서비스를 이용하실 수 없습니다." AnchorPane.leftAnchor="134.0" />
+      <Text layoutX="132.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(유효기간이 남은 상품 및 캐시 잔액도 모두 이용하실 수 없습니다.)" AnchorPane.leftAnchor="134.0" />
+      <Text layoutX="132.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="개인정보 취급방침에 따라 불량 이용 및 이용제한에 관한 기록은 1년간 보관됩니다." AnchorPane.leftAnchor="134.0" />
+      <Text layoutX="132.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="공개앨범, 댓글 등 공적 게시물은 회원탈퇴 시 삭제되지 않습니다. 자신이 생성한 " AnchorPane.leftAnchor="134.0" />
+      <Text layoutX="132.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="컨텐츠의 삭제를 원하실 경우에는 반드시 개별로 삭제하신 후 회원탈퇴를 신청하시기 바랍니다." AnchorPane.leftAnchor="134.0" />
+      <Text layoutX="134.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원 탈퇴를 하시면 기존에 사용하신 동일한 아이디로 신규가입이 불가능 합니다." AnchorPane.leftAnchor="134.0" />
+      <Text layoutX="123.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="·" wrappingWidth="4.74608451128006" AnchorPane.leftAnchor="120.0" />
+      <Text layoutX="120.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="·" AnchorPane.leftAnchor="120.0" />
+      <Text layoutX="120.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="·" AnchorPane.leftAnchor="120.0" />
+      <Text layoutX="126.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="·" AnchorPane.leftAnchor="120.0" />
+      <CheckBox fx:id="combo_Check" layoutX="115.0" layoutY="254.0" mnemonicParsing="false" text="위의 내용을 모두 확인하였으며, 회원탈퇴 시 모든 정보가 복구 불가능함에 동의합니다." />
+      <Button fx:id="btn_Ok" layoutX="279.0" layoutY="295.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #090948;" text="회원탈퇴" textFill="WHITE" />
+      <Button fx:id="btn_Cl" layoutX="373.0" layoutY="295.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #090948;" text="취소" textFill="WHITE" />
+   </children>
+</AnchorPane>

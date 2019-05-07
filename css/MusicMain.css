@@ -1,0 +1,198 @@
+* {
+
+}
+
+.tab{
+   -fx-background-color: #090948;
+   
+}
+
+.tab-label{
+    -fx-font-family: "-윤고딕330";
+    -fx-font-size: 18.0;
+    -fx-text-fill: white;
+}
+
+.tab-header-background{
+   -fx-background-color: #090948;
+   
+}
+
+.tab{
+   -fx-background-color: #090948;
+   
+}
+
+.tab:selected{
+   -fx-border-width: 0.0 0.0 5.0 0.0;
+   -fx-border-color: #9c0000;
+}
+
+.contentlabel{
+    -fx-font-family: "-윤고딕350";
+    -fx-font-size: 18.0;
+    -fx-font-weight: bold;
+    
+}
+
+.tree-table-row-cell:selected .tree-table-cell .label{
+    -fx-text-fill: white;
+}
+
+.tree-table-view .column-header{
+    -fx-background-color: white;
+    -fx-border-color: white;
+     -fx-font-family: "-윤고딕330";
+}
+.tree-table-row-cell:hover .tree-table-cell{
+	-fx-background-color: rgba(156.0, 0.0, 0.0, 1.0);
+    -fx-table-cell-border-color: rgba(156.0, 0.0, 0.0, 1.0);
+    -fx-text-fill: white;
+}
+
+.tree-table-row-cell:selected .tree-table-cell .label{
+    -fx-text-fill: white;
+}
+
+.tree-table-row-cell:selected .tree-table-cell{
+	-fx-background-color: rgba(156.0, 0.0, 0.0, 1.0);
+    -fx-table-cell-border-color: rgba(156.0, 0.0, 0.0, 1.0);
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+    -fx-text-fill: white;
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected {
+    -fx-background-color: rgba(156.0, 0.0, 0.0, 0.76);
+    -fx-table-cell-border-color: rgba(156.0, 0.0, 0.0, 0.76);
+    
+}
+.tree-table-row-cell{
+	-fx-font-family: "-윤고딕330";
+}
+
+.tree-table-view .column-header{
+    -fx-background-color: white;
+    -fx-border-color: white;
+     -fx-font-family: "-윤고딕330";
+}
+
+ .table-column {
+  -fx-alignment: CENTER-LEFT;
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+    -fx-text-fill: white;
+   
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected {
+    -fx-background-color: #9c0000;
+    -fx-table-cell-border-color: #9c0000;
+    
+}
+.tree-table-row-cell{
+	-fx-font-family: "-윤고딕330";
+
+
+}
+
+.tree-table-view .column-header{
+    -fx-background-color: white;
+    -fx-border-color: #c9c9c9;
+    -fx-font-family: "-윤고딕330";
+}
+
+#lb_chart, #lb_editor{
+   -fx-font-size: 17.0pt;
+   -fx-font-family: "-윤고딕350";
+}
+
+#lb_new{
+   -fx-font-family: "-윤고딕350";
+   -fx-font-size: 20.0pt;
+}
+
+#lb_id{
+   -fx-font-family: "-윤고딕350";
+   -fx-font-size: 14.0pt;
+}
+
+#txt_search{
+   -fx-font-family: "-윤고딕350";
+   -fx-font-size: 14.0pt;
+}
+
+#bar{
+   -fx-font-family: "-윤고딕340";
+}
+
+#lb_chart1, #lb_chart2, #lb_chart3, #lb_chart4, #lb_chart5, #lb_chart6{
+   -fx-font-family: "-윤고딕340";
+}
+
+.tab-label{
+    -fx-font-family: "-윤고딕350";
+}
+
+#lbbb1, #lbbb2, #lbbb3, #lbbb4, #lbbb5, #lbbb6, #lbbb7, #lbbb8, #lbbb9, #lbbb10{
+   -fx-font-family: "-윤고딕340";
+   -fx-font-size: 14.0pt;
+}
+
+#lbb1, #lbb2, #lbb3, #lbb4, #lbb5, #lbb6, #lbb7, #lbb8, #lbb9, #lbb10{
+   -fx-font-family: "-윤고딕330";
+   -fx-font-size: 20.0pt;
+}
+
+#lb_bottom1, #lb_bottom2, #lb_bottom3, #lb_bottom4, #lb_bottom5, #lb_bottom6, #lb_bottom7, #lb_bottom8,
+ #lb_bottom9, #lb_bottom10, #lb_bottom11, #lb_bottom12, #lb_bottom13 {
+   -fx-font-family: "-윤고딕330";
+}
+
+#tab1, #tab2, #tab3, #tab4, #tab5 {
+   -fx-font-family: "-윤고딕330";
+   -fx-text-fill: #090948;
+}
+#tab1-label{
+   -fx-font-family: "-윤고딕330";
+   -fx-text-fill: #090948;
+}
+
+.menu-item:focused {
+     -fx-background-color: #090948;
+}
+#btn_ticket, #btn_login, #btn_join, #btn_logout {
+   -fx-font-family: "-윤고딕330";
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

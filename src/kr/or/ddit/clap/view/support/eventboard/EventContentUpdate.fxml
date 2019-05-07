@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="773.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.support.eventboard.EventContentUpdateController">
+   <children>
+      <Label layoutX="26.0" layoutY="26.0" prefHeight="41.0" prefWidth="214.0" text="이벤트 수정">
+         <font>
+            <Font name="YDIYGO350" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="15.0" layoutY="67.0" prefHeight="211.0" prefWidth="734.0" style="border: #54b823;">
+         <children>
+            <ImageView fx:id="imgview_eventImg" fitHeight="211.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin></ImageView>
+            <VBox prefHeight="165.0" prefWidth="470.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="번       호">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="label_no" text="번ㅎ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="제       목">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXTextField fx:id="text_Title" focusColor="#090948" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="시작 날짜">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXDatePicker fx:id="date_Start" defaultColor="#090948" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="종료 날짜">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXDatePicker fx:id="date_End" defaultColor="#090948" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="등  록  자">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="label_Id" text="아이디">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="100.0">
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Line endX="625.0" layoutX="120.0" layoutY="331.0" startX="-92.0" stroke="#9c0000" />
+      <JFXButton fx:id="btn_updateImg" layoutX="68.0" layoutY="280.0" prefHeight="28.0" prefWidth="131.0" style="-fx-background-color: #090948;" text="이미지 등록" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="IMAGE" />
+         </graphic>
+         <font>
+            <Font name="YDIYGO340" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="41.0" layoutY="343.0" prefHeight="41.0" prefWidth="214.0" text="이벤트 내용">
+         <font>
+            <Font name="YDIYGO350" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton />
+      <JFXButton fx:id="btn_update" layoutX="504.0" layoutY="662.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #090948;" text="Update" textFill="WHITE" AnchorPane.topAnchor="662.0" />
+      <JFXButton fx:id="btn_delete" layoutX="609.0" layoutY="662.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #090948;" text="Delete" textFill="WHITE" AnchorPane.topAnchor="662.0" />
+      <JFXTextArea fx:id="text_Content" layoutX="43.0" layoutY="398.0" maxWidth="670.0" minWidth="653.0" prefHeight="256.0" prefWidth="670.0" />
+   </children>
+</AnchorPane>

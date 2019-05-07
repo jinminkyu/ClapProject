@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="773.0" style="-fx-background-color: #fff;" stylesheets="@../../../../../../../table.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.recommend.album.UpdateRecommendAlbumController">
+   <children>
+      <Label layoutX="26.0" layoutY="26.0" prefHeight="41.0" prefWidth="268.0" text="추천 앨범 수정">
+         <font>
+            <Font name="YDIYGO350" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="15.0" layoutY="67.0" prefHeight="211.0" prefWidth="734.0" style="border: #54b823;">
+         <children>
+            <ImageView fx:id="imgview_img" fitHeight="211.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin></ImageView>
+            <VBox fx:id="main_vbox" prefHeight="165.0" prefWidth="470.0">
+               <children>
+                  <HBox maxHeight="44.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="추천앨범 명">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXTextField fx:id="txt_rcmName" focusColor="#090948" maxWidth="242.0" minWidth="119.0" prefHeight="29.0" prefWidth="242.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="44.0" minHeight="80.0" minWidth="80.0" prefHeight="80.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="아이콘 선택">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <VBox alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="80.0" prefWidth="70.0">
+                           <children>
+                              <FontAwesomeIcon fx:id="icon" fill="#090948" iconName="ANGELLIST" size="60">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </FontAwesomeIcon>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="21.0" prefWidth="453.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="192.0" style="-fx-background-color: #ffffff;" text="추천앨범 내용">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="71.0" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="txt_rcmContents" prefHeight="104.0" prefWidth="324.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Line endX="625.0" layoutX="120.0" layoutY="375.0" startX="-92.0" stroke="#9c0000" />
+      <JFXButton layoutX="348.0" layoutY="317.0" onAction="#btn_changeImg" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #090948;" text="이미지 수정" textFill="WHITE" AnchorPane.topAnchor="317.0">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="IMAGE" />
+         </graphic>
+         <font>
+            <Font name="YDIYGO340" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="536.0" layoutY="689.0" onAction="#updateRcmAlbum" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #090948;" text="Insert" textFill="WHITE" />
+      <JFXButton layoutX="641.0" layoutY="689.0" onAction="#cancel" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #090948;" text="Cancel" textFill="WHITE" />
+      <JFXButton layoutX="463.0" layoutY="317.0" onAction="#btn_insertMusic" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #090948;" text="곡  추가" textFill="WHITE" AnchorPane.topAnchor="317.0">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="MUSIC" />
+         </graphic>
+         <font>
+            <Font name="YDIYGO340" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTreeTableView fx:id="tbl_music" layoutX="28.0" layoutY="397.0" prefHeight="259.0" prefWidth="718.0">
+         <columns>
+            <TreeTableColumn fx:id="col_MusicName" prefWidth="216.0" text="곡" />
+            <TreeTableColumn fx:id="col_AlbName" prefWidth="201.0" text="앨범 " />
+            <TreeTableColumn fx:id="col_SingerName" prefWidth="254.0" text="아티스트" />
+            <TreeTableColumn fx:id="col_Deletebtn" prefWidth="44.0" />
+            <TreeTableColumn fx:id="col_MusicNo" minWidth="0.0" prefWidth="0.0" text="곡 번호" visible="false" />
+         </columns>
+      </JFXTreeTableView>
+      <Label fx:id="lable_cntMusic" alignment="TOP_RIGHT" layoutX="676.0" layoutY="658.0" prefHeight="15.0" prefWidth="70.0" text="0 곡 ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="288.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="좋아요">
+         <graphic>
+            <FontAwesomeIcon fill="#9c0000" iconName="HEART" />
+         </graphic>
+         <font>
+            <Font name="YDIYGO340" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_LikeCnt" layoutX="377.0" layoutY="288.0" prefWidth="200.0" text="???" textFill="#090c64">
+         <font>
+            <Font name="YDIYGO340" size="14.0" />
+         </font>
+      </Label>
+      <VBox fx:id="icon_box" layoutX="330.0" layoutY="175.0" minHeight="170.0" minWidth="410.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #d6d6c2; -fx-border-width: 5;" visible="false">
+         <children>
+            <HBox prefHeight="80.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="icon1" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon1" fill="#090948" iconName="GITHUB_ALT" size="55">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="icon2" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon2" fill="#090948" iconName="BED" size="55">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="icon3" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon3" fill="#090948" iconName="CAR" size="55">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="icon4" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon4" fill="#090948" iconName="REDDIT" size="55">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="icon5" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon5" fill="#090948" iconName="ANGELLIST" size="60">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="80.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="icon6" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon6" fill="#090948" iconName="BICYCLE" size="55">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="icon7" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon7" fill="#090948" iconName="BIRTHDAY_CAKE" size="55">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="icon8" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon8" fill="#090948" iconName="LAPTOP" size="55">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="icon9" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon9" fill="#090948" iconName="COFFEE" size="55">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="icon10" alignment="CENTER" minHeight="0.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iicon10" fill="#090948" iconName="CUTLERY" size="55">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <StackPane layoutX="340.0" layoutY="99.0" prefHeight="80.0" prefWidth="80.0" AnchorPane.leftAnchor="390.0">
+         <children>
+            <JFXButton fx:id="btn_icon" minHeight="80.0" minWidth="80.0" text="  " textFill="WHITE">
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin></JFXButton>
+         </children>
+      </StackPane>
+      <VBox fx:id="btn_box" layoutX="335.0" layoutY="180.0" prefHeight="160.0" prefWidth="400.0" visible="false">
+         <children>
+            <HBox prefHeight="80.0" prefWidth="400.0">
+               <children>
+                  <StackPane fx:id="stack1" onMouseEntered="#select1" onMouseExited="#exit1" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn1" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stack11" onMouseEntered="#select2" onMouseExited="#exit2" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn2" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stack12" onMouseEntered="#select3" onMouseExited="#exit3" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn3" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stack13" onMouseEntered="#select4" onMouseExited="#exit4" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn4" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stack14" onMouseEntered="#select5" onMouseExited="#exit5" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn5" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="80.0" prefWidth="400.0">
+               <children>
+                  <StackPane fx:id="stack11" onMouseEntered="#select6" onMouseExited="#exit6" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn6" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stack111" onMouseEntered="#select7" onMouseExited="#exit7" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn7" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stack121" onMouseEntered="#select8" onMouseExited="#exit8" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn8" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stack131" onMouseEntered="#select9" onMouseExited="#exit9" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn9" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stack141" onMouseEntered="#select10" onMouseExited="#exit10" prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <JFXButton fx:id="btn10" prefHeight="80.0" prefWidth="80.0" text=" " />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

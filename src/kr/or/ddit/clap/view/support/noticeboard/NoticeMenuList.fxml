@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="d_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="448.0" minWidth="-Infinity" prefHeight="768.0" prefWidth="1005.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../../../Notice.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.support.noticeboard.NoticeMenuController">
+   <children>
+      <Label layoutX="114.5" layoutY="15.0" text="공지사항" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="YDIYGO350" size="30.0" />
+         </font>
+      </Label>
+      <JFXTreeTableView fx:id="tbl_notice" layoutX="162.0" layoutY="140.0" prefHeight="400.0" prefWidth="766.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="80.0">
+         <columns>
+            <TreeTableColumn fx:id="col_noticeNo" prefWidth="57.0" text="번호" />
+            <TreeTableColumn fx:id="col_noticeTitle" prefWidth="365.0" text="제목" />
+            <TreeTableColumn fx:id="col_noticeId" prefWidth="140.0" text="작성자" />
+            <TreeTableColumn fx:id="col_noticeDate" minWidth="0.0" prefWidth="126.0" text="등록일" />
+            <TreeTableColumn fx:id="col_noticeCnt" prefWidth="77.0" text="조회수" />
+         </columns>
+      </JFXTreeTableView>
+      <Pagination fx:id="n_paging" layoutX="162.0" layoutY="21.0" prefHeight="452.0" prefWidth="766.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="80.0" />
+      <JFXButton id="btn" fx:id="btn_add" layoutX="801.0" layoutY="533.0" text="작성하기" AnchorPane.leftAnchor="801.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="533.0" />
+   </children>
+</AnchorPane>

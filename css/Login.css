@@ -1,0 +1,42 @@
+* {
+
+}
+
+#btn_search, #lb2, #btn_refresh, #lb3, #txt_id, #txt_pw, #txt_captcha, #btn_captcha, #lb_captcha, 
+#lb_check{
+	-fx-font-family: "-윤고딕330";
+	-fx-font-size: 10pt;
+}
+
+#btn_login{
+	-fx-font-family: "-윤고딕330";
+	-fx-font-size: 12pt;
+}
+
+#lb1{
+	-fx-font-family: "-윤고딕330";
+	-fx-font-size: 18pt;
+}
+
+#btn {
+	-fx-background-color: #090948;
+	-fx-text-fill: white;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

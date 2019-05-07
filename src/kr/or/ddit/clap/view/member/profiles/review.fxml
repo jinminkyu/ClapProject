@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Head" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="894.0" prefWidth="728.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.member.profiles.ReviewMusController">
+   <children>
+      <VBox prefHeight="816.0" prefWidth="728.0">
+         <children>
+            <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="98.0" prefWidth="728.0">
+               <children>
+                  <Button layoutX="118.0" layoutY="25.0" mnemonicParsing="false" onAction="#btn_mus" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #090948;" text="곡" textFill="WHITE" AnchorPane.leftAnchor="117.0" AnchorPane.topAnchor="30.0">
+                    </Button>
+                  <Text  fx:id="la_mypge" layoutX="26.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="리     뷰" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="30.0">
+                     
+                  </Text>
+                  <Button layoutX="241.0" layoutY="25.0" mnemonicParsing="false" onAction="#btn_alb" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #090948; -fx-border-color: #000000;" text="앨 범" textFill="WHITE" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="30.0">
+                    </Button>
+                  <Button layoutX="364.0" layoutY="25.0" mnemonicParsing="false" onAction="#btn_Its" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #090948;" text="아티스트" textFill="WHITE" AnchorPane.leftAnchor="303.0" AnchorPane.topAnchor="30.0">
+                   </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="contents" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="728.0">
+               <children>
+                  <JFXTreeTableView fx:id="tbl_Review" layoutX="12.0" layoutY="82.0" prefHeight="387.0" prefWidth="704.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="82.0">
+                     <columns>
+                        <TreeTableColumn fx:id="col_imge" />
+                        <TreeTableColumn fx:id="col_title" prefWidth="103.0" text="곡 제목" />
+                        <TreeTableColumn fx:id="col_Its" prefWidth="87.0" text="가수명" />
+                        <TreeTableColumn fx:id="col_Reviewcon" prefWidth="210.0" text="댓글 내용" />
+                        <TreeTableColumn fx:id="col_ReviwIndate" prefWidth="113.0" text="댓글 등록일 " />
+                        <TreeTableColumn fx:id="col_del" minWidth="0.0" prefWidth="110.0" text="삭제" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <Pagination fx:id="p_Paging" layoutY="68.0" prefHeight="454.0" prefWidth="720.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

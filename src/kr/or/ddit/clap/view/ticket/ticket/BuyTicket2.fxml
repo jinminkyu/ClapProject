@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="620.0" minWidth="950.0" prefHeight="620.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.ticket.ticket.BuyTicketController">
+   <children>
+      <BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="950.0">
+         <top>
+            <VBox prefHeight="61.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="35.0" prefWidth="600.0" spacing="5.0">
+                     <children>
+                        <Label text="이용권 구매">
+                           <font>
+                              <Font name="YDIYGO350" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="6.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="800.0">
+                     <VBox.margin>
+                        <Insets left="13.0" />
+                     </VBox.margin></Separator>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+         <center>
+            <VBox prefHeight="417.0" prefWidth="540.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="179.0" prefWidth="820.0">
+                     <children>
+                        <AnchorPane prefHeight="160.0" prefWidth="820.0">
+                           <children>
+                              <ImageView fx:id="imgView" fitHeight="90.0" fitWidth="90.0" layoutX="7.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label layoutX="130.0" layoutY="20.0" text="상품 정보" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font name="YDIYGO350" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="340.0" layoutY="20.0" text="결제 금액" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font name="YDIYGO350" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="540.0" layoutY="20.0" text="이용권 기간" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font name="YDIYGO350" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="123.0" layoutY="66.0" text="무제한 음악감상" textFill="#090948" AnchorPane.topAnchor="66.0">
+                                 <font>
+                                    <Font name="YDIYGO350" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lb1" layoutX="134.0" layoutY="90.0" text="1개월 이용권" textFill="#090948" AnchorPane.topAnchor="90.0">
+                                 <font>
+                                    <Font name="YDIYGO350" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lb2" layoutX="345.0" layoutY="75.0" text="2,500원" textFill="#090948">
+                                 <font>
+                                    <Font name="YDIYGO350" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lb3" layoutX="540.0" layoutY="66.0" text="~ 2019-01-09" textFill="#090948" AnchorPane.topAnchor="66.0">
+                                 <font>
+                                    <Font name="YDIYGO350" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lb4" layoutX="538.0" layoutY="93.0" text="→ 2019-02-09 (+31일)" textFill="#00cc00" AnchorPane.topAnchor="90.0">
+                                 <font>
+                                    <Font name="YDIYGO350" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lb_vip" layoutX="123.0" layoutY="120.0" text="(VIP로 등급 변경)" visible="false" AnchorPane.leftAnchor="113.0" AnchorPane.topAnchor="116.0">
+                                 <font>
+                                    <Font name="YDIYGO350" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="800.0">
+                           <VBox.margin>
+                              <Insets left="-17.0" top="-5.0" />
+                           </VBox.margin></Separator>
+                     </children>
+                  </VBox>
+                  <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="700.0">
+                     <children>
+                        <Label text="결제 정보">
+                           <font>
+                              <Font name="YDIYGO350" size="26.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="285.0" />
+                           </VBox.margin>
+                        </Label>
+                        <VBox prefHeight="283.0" prefWidth="820.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="670.0" style="-fx-border-color: #090948;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="668.0" style="-fx-background-color: #e1e1ea;" text="일반 결제">
+                                       <font>
+                                          <Font name="YDIYGO350" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="670.0" spacing="30.0" style="-fx-border-color: #090948;">
+                                 <children>
+                                    <JFXRadioButton fx:id="rb1" text="신용카드">
+                                       <font>
+                                          <Font name="YDIYGO350" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="rb2" text="실시간 계좌이체">
+                                       <font>
+                                          <Font name="YDIYGO350" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="rb3" text="무통장 입금">
+                                       <font>
+                                          <Font name="YDIYGO350" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="rb4" text="휴대폰">
+                                       <font>
+                                          <Font name="YDIYGO350" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="100.0" prefWidth="100.0" spacing="20.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="400.0">
+                                       <children>
+                                          <Label text="카드구분">
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="50.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="YDIYGO350" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXRadioButton fx:id="rb_card1" text="개인카드">
+                                             <font>
+                                                <Font name="YDIYGO350" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="2.0" />
+                                             </HBox.margin>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton fx:id="rb_card2" text="법인카드">
+                                             <HBox.margin>
+                                                <Insets left="29.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="YDIYGO350" size="18.0" />
+                                             </font>
+                                          </JFXRadioButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="100.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="400.0" spacing="10.0">
+                                       <children>
+                                          <Label text="카드선택">
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="50.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="YDIYGO350" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXComboBox fx:id="combo1" minHeight="29.0" prefHeight="7.0" prefWidth="120.0" style="-fx-font-family: YDIYGO350; -fx-font-size: 12pt;">
+                                             <HBox.margin>
+                                                <Insets left="9.0" />
+                                             </HBox.margin></JFXComboBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="100.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="400.0" spacing="10.0">
+                                       <children>
+                                          <Label text="할부기간">
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="50.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="YDIYGO350" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXComboBox fx:id="combo2" minHeight="29.0" prefHeight="7.0" prefWidth="120.0" style="-fx-font-family: YDIYGO350; -fx-font-size: 12pt;">
+                                             <HBox.margin>
+                                                <Insets left="9.0" />
+                                             </HBox.margin></JFXComboBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="100.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXButton fx:id="btn_ok" style="-fx-background-color: #090948;" text="결제하기" textFill="WHITE">
+                                             <font>
+                                                <Font name="YDIYGO350" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="-80.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="45.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="30.0" right="30.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <padding>
+            <Insets left="70.0" />
+         </padding>
+      </BorderPane>
+      <VBox fx:id="box" layoutY="620.0" minHeight="620.0" minWidth="950.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <VBox prefHeight="61.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="35.0" prefWidth="600.0" spacing="5.0">
+                     <children>
+                        <Label text="이용권 구매">
+                           <font>
+                              <Font name="YDIYGO350" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="6.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="412.0" prefWidth="880.0" spacing="15.0">
+               <children>
+                  <FontAwesomeIcon fill="#090948" iconName="CHECK_CIRCLE" size="60" />
+                  <Label text="결제 완료!">
+                     <font>
+                        <Font name="YDIYGO350" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="구매해주셔서 감사합니다.">
+                     <font>
+                        <Font name="YDIYGO350" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="Clap: 음악, 그리고 설레임">
+                     <font>
+                        <Font name="YDIYGO350" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="160.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="70.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

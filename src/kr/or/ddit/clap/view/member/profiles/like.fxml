@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Head" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="894.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.member.profiles.LikeController">
+   <children>
+      <VBox prefHeight="883.0" prefWidth="720.0">
+         <children>
+            <AnchorPane prefHeight="98.0" prefWidth="720.0">
+               <children>
+                  <Button  fx:id="btn_mus" layoutX="112.0" layoutY="30.0" mnemonicParsing="false" onAction="#btn_mus" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #090948;" text="곡" textFill="WHITE" AnchorPane.leftAnchor="112.0" AnchorPane.topAnchor="30.0">
+                  </Button>
+                  <Text fx:id="la_mypge" layoutX="26.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="좋아요♥" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="30.2451171875">
+                     
+                  </Text>
+                  <Button fx:id="btn_Rcm" layoutX="303.0" layoutY="30.0" mnemonicParsing="false" onAction="#btn_Rcm" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #090948;" text="추 천" textFill="WHITE" AnchorPane.leftAnchor="303.0" AnchorPane.topAnchor="30.0">
+                     </Button>
+                  <Button layoutX="210.0" layoutY="30.0" mnemonicParsing="false" onAction="#btn_alb" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #090948;" text="앨 범" textFill="WHITE" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="30.0" />
+                  <Button layoutX="397.0" layoutY="30.0" mnemonicParsing="false" onAction="#btn_Its" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #090948;" text="아티스트" textFill="WHITE" AnchorPane.topAnchor="30.0">
+                     </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="contents" prefHeight="625.0" prefWidth="720.0">
+               <children>
+                  <JFXCheckBox fx:id="chbox_main" checkedColor="#9c0000" layoutX="10.0" layoutY="33.0" onAction="#mainCheck" prefHeight="24.0" prefWidth="37.0" text=" " unCheckedColor="#090948" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="33.0" />
+                  <JFXTreeTableView fx:id="tbl_like" layoutX="11.0" layoutY="87.0" prefHeight="400.0" prefWidth="704.0" stylesheets="@../../../../../../../mypage.css" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="87.0">
+                     <columns>
+                        <TreeTableColumn fx:id="col_Checks" prefWidth="34.0" text="  " />
+                        <TreeTableColumn fx:id="col_Img" prefWidth="129.0" text=" " />
+                        <TreeTableColumn fx:id="col_MusInfo" prefWidth="134.0" text="곡정보" />
+                        <TreeTableColumn fx:id="col_Its" prefWidth="85.0" text="아티스트" />
+                        <TreeTableColumn fx:id="col_Alb" prefWidth="129.0" text="앨범명" />
+                        <TreeTableColumn fx:id="col_LikeIndate" prefWidth="123.0" text="좋아요 한 날" />
+                        <TreeTableColumn fx:id="col_Like" prefWidth="69.0" text="좋아요" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <Pagination fx:id="p_Paging" layoutX="10.0" layoutY="88.0" prefHeight="458.0" prefWidth="704.0" />
+                  <JFXButton layoutX="170.0" layoutY="31.0" onAction="#btnMainPut" ripplerFill="#9c0000" text="담기">
+                     <graphic>
+                        <FontAwesomeIcon iconName="FOLDER_ALT" size="20" />
+                     </graphic>
+                    
+                  </JFXButton>
+                  <JFXButton layoutX="112.0" layoutY="31.0" onAction="#btnMainAdd" ripplerFill="#9c0000" text="추가">
+                     <graphic>
+                        <FontAwesomeIcon iconName="PLUS" size="20" />
+                     </graphic>
+                    
+                  </JFXButton>
+                  <JFXButton layoutX="52.0" layoutY="31.0" onAction="#btnMainPlay" ripplerFill="#9c0000" text="듣기">
+                     <graphic>
+                        <FontAwesomeIcon iconName="PLAY_CIRCLE_ALT" size="20" />
+                     </graphic>
+                     
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

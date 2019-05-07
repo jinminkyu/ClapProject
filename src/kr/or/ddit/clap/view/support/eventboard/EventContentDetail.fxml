@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="e_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="448.0" minWidth="-Infinity" prefHeight="768.0" prefWidth="1005.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.support.eventboard.EventContentDetailController">
+   <children>
+      <TextArea fx:id="text_cont" layoutX="286.0" layoutY="227.0" prefHeight="330.0" prefWidth="640.0" style="-fx-border-style: solid; -fx-border-radius: 5;" AnchorPane.topAnchor="150.0" />
+      <Label layoutX="37.0" layoutY="29.0" text="이벤트" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="15.0">
+         <font>
+			<Font name="YDIYGO350" size="30.0" />
+		</font>
+      </Label>
+      <Line endX="800.0" layoutX="138.0" layoutY="81.0" startX="-100.0" stroke="#9c0000" AnchorPane.topAnchor="80.5" />
+      <Line endX="800.0" layoutX="138.0" layoutY="126.0" startX="-100.0" stroke="#9c0000" AnchorPane.topAnchor="124.5" />
+      <Text fx:id="Text_EventNo" layoutX="88.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="번호" />
+      <Text fx:id="Text_EventTitle" layoutX="277.0" layoutY="108.59765625" strokeType="OUTSIDE" strokeWidth="0.0" text="제목" AnchorPane.topAnchor="96.59765625" />
+      <Text fx:id="Text_EventSDate" layoutX="570.0" layoutY="107.59765625" strokeType="OUTSIDE" strokeWidth="0.0" text="시작일" AnchorPane.topAnchor="95.59765625" />
+      <Text fx:id="Text_EventEDate" layoutX="784.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="종료일" />
+      <ImageView fx:id="ImageView" fitHeight="150.0" fitWidth="227.0" layoutX="52.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="150.0" />
+      <Label fx:id="lb_Content" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="294.0" layoutY="161.0" prefHeight="305.0" prefWidth="625.0" text="이벤트 내용" wrapText="true" AnchorPane.topAnchor="161.0" />
+      <Text fx:id="Text_ID" layoutX="186.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" AnchorPane.topAnchor="96.0" />
+      <Label layoutX="44.0" layoutY="95.0" text="번  호 :" />
+      <Label layoutX="135.0" layoutY="97.0" text="작성자 :" />
+      <Label layoutX="231.0" layoutY="97.0" text="제  목 : " />
+      <Label layoutX="523.0" layoutY="96.0" text="시작일 :" />
+      <Label layoutX="736.0" layoutY="96.0" text="종료일 :" />
+   </children>
+</AnchorPane>

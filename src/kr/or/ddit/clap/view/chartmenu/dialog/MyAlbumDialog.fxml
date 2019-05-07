@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane stylesheets="@../../../../../../../ChartMenu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.chartmenu.dialog.MyAlbumDialogController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" spacing="4.0" style="-fx-background-color: white;">
+         <children>
+            <Label text="마이앨범 담기">
+               <font>
+                  <Font name="YDIYGO350" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="91.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="tf_albumName" focusColor="#9c0000" promptText="새 앨범" unFocusColor="#c9c9c9">
+                     <font>
+                        <Font name="-윤고딕330" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" top="2.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXButton onAction="#myAlbumInsert" prefHeight="23.0" prefWidth="40.0" ripplerFill="#9c0000" style="-fx-border-color: #c9c9c9;" text="확인">
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font></JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+            </HBox>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <content>
+                  <JFXTreeTableView fx:id="t_table" prefHeight="400.0" prefWidth="285.0">
+                     <columns>
+                        <TreeTableColumn fx:id="tcol_album" prefWidth="284.0" text="마이앨범 내역" />
+                        <TreeTableColumn fx:id="tcol_no" prefWidth="284.0" />
+                     </columns>
+                  </JFXTreeTableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

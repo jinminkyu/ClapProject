@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main" minHeight="448.0" prefHeight="768.0" prefWidth="1005.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.support.qna.QnaDetailContentController">
+   <children>
+      <Label text="문의사항" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="YDIYGO350" size="30.0" />
+         </font>
+      </Label>
+      <Line endX="760.0" layoutX="173.0" layoutY="80.0" startX="-100.0" stroke="#9c0000" AnchorPane.leftAnchor="72.5" AnchorPane.rightAnchor="71.5" AnchorPane.topAnchor="80.5" />
+      <Text fx:id="Text_QnaTitle" layoutX="232.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="문의 제목" />
+      <Text fx:id="Text_Date" layoutX="775.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="등록일" />
+      <TextArea fx:id="text_cont" layoutX="114.0" layoutY="197.0" prefHeight="258.0" prefWidth="780.0" style="-fx-border-style: solid; -fx-border-radius: 5;" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="111.0" AnchorPane.topAnchor="150.0" />
+      <JFXButton id="btn" fx:id="btn_delete" layoutX="790.0" layoutY="412.0" text="삭  제" />
+      <JFXButton id="btn" fx:id="btn_update" layoutX="845.0" layoutY="412.0" text="수  정" />
+      <Text fx:id="Text_Id" layoutX="680.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Text fx:id="Text_QnaType" layoutX="110.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="문의유형" />
+      <Line endX="760.0" layoutX="173.0" layoutY="125.0" startX="-100.0" stroke="#9c0000" AnchorPane.leftAnchor="72.5" AnchorPane.topAnchor="124.5" />
+      <Label fx:id="Text_Content" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="124.0" layoutY="160.0" prefHeight="239.0" prefWidth="758.0" text="문의 내용" />
+      <TextArea fx:id="text_QnaRe" layoutX="114.0" layoutY="438.0" prefHeight="80.0" prefWidth="677.0" style="-fx-border-radius: 10;" />
+      <JFXButton id="btn" fx:id="btn_QnaRe" layoutX="804.0" layoutY="438.0" prefHeight="80.0" prefWidth="89.0" text="답변 등록" AnchorPane.rightAnchor="112.0" />
+      <AnchorPane fx:id="r_main" layoutX="114.0" layoutY="582.0" prefHeight="123.0" prefWidth="780.0" style="-fx-border-radius: 5;" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="111.0" AnchorPane.topAnchor="522.0">
+         <children>
+            <Label layoutX="11.0" layoutY="7.0" text="문의번호 :" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="7.0" />
+            <Label fx:id="lb_qnaNo" layoutX="69.0" layoutY="7.0" text="Number" AnchorPane.topAnchor="7.0" />
+            <Label fx:id="lb_Content" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="14.0" layoutY="34.0" prefHeight="85.0" prefWidth="758.0" style="-fx-border-color: #b1a3a3; -fx-border-radius: 7;" text="문의 내용" wrapText="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0" />
+            <Label layoutX="142.0" layoutY="7.0" text="답글번호 :" AnchorPane.topAnchor="7.0" />
+            <Label fx:id="lb_Qna_re_no" layoutX="200.0" layoutY="7.0" text="Number" AnchorPane.topAnchor="7.0" />
+            <Label fx:id="lb_Date" layoutX="273.0" layoutY="7.0" text="등록날짜" AnchorPane.topAnchor="7.0" />
+            <Label fx:id="lb_Memid" layoutX="403.0" layoutY="7.0" text="ID" AnchorPane.topAnchor="7.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="610.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../../../table.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.recommend.album.SelectMusicController">
+   <children>
+      <Pagination fx:id="p_paging" layoutX="33.0" layoutY="96.0" prefHeight="430.0" prefWidth="541.0" style="-fx-background-color: #fff;" />
+      <JFXTreeTableView fx:id="tbl_Music" layoutX="33.0" layoutY="116.0" prefHeight="362.0" prefWidth="527.0" AnchorPane.leftAnchor="33.0">
+         <columns>
+            <TreeTableColumn fx:id="col_musicImg" prefWidth="105.0" text="Image" />
+            <TreeTableColumn fx:id="col_musicTitle" prefWidth="200.0" text="곡" />
+            <TreeTableColumn fx:id="col_albumName" minWidth="0.0" prefWidth="94.0" text="앨범 명" />
+            <TreeTableColumn fx:id="col_singerName" prefWidth="127.0" text="아티스트" />
+            <TreeTableColumn fx:id="col_genreDetail" minWidth="0.0" prefWidth="0.0" text="장르" visible="false" />
+            <TreeTableColumn fx:id="col_musicNo" minWidth="0.0" prefWidth="0.0" text="앨범번호" visible="false" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXComboBox fx:id="combo_search" layoutX="147.0" layoutY="45.0" promptText="곡" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="40.0" />
+      <JFXTextField fx:id="text_search" focusColor="#090948" layoutX="230.0" layoutY="38.0" unFocusColor="#090948" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="38.0" />
+      <Line endX="525.0" layoutX="35.0" layoutY="77.0" stroke="#9c0000" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="51.0" />
+      <JFXButton fx:id="btn_search" layoutX="342.0" layoutY="31.0" prefHeight="42.0" prefWidth="61.0" text=" " AnchorPane.leftAnchor="342.0" AnchorPane.topAnchor="31.0" />
+      <FontAwesomeIcon iconName="SEARCH" layoutX="375.0" layoutY="62.0" text="" AnchorPane.leftAnchor="367.0" AnchorPane.topAnchor="46.0" />
+      <JFXButton layoutX="516.0" layoutY="46.0" onAction="#btn_close" style="-fx-background-color: #090948;" text="확인" textFill="#fbf9f9" AnchorPane.rightAnchor="54.0" />
+   </children>
+</AnchorPane>

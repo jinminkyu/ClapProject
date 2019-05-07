@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="773.0" style="-fx-background-color: #fff;" stylesheets="@../../../../../../../ChartMenu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.recommend.album.RecommendAlbumDetailController">
+   <children>
+      <Label fx:id="labelrcmName1" layoutX="26.0" layoutY="26.0" prefHeight="41.0" prefWidth="718.0" text="추천 앨범 명">
+         <font>
+            <Font name="YDIYGO350" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="15.0" layoutY="67.0" prefHeight="211.0" prefWidth="734.0" style="border: #54b823;">
+         <children>
+            <ImageView fx:id="imgview_img" fitHeight="211.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin></ImageView>
+            <VBox fx:id="main_vbox" prefHeight="165.0" prefWidth="470.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="추천앨범 명">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="labelrcmName2" prefHeight="30.0" prefWidth="366.0" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="70.0" minHeight="80.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="앨범 아이콘">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="-8.0" />
+                           </HBox.margin>
+                        </Label>
+                        <VBox alignment="CENTER" minHeight="80.0" minWidth="80.0" prefHeight="200.0" prefWidth="70.0">
+                           <children>
+                              <FontAwesomeIcon fx:id="icon" fill="#090948" iconName="ANGELLIST" size="60">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </FontAwesomeIcon>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="21.0" prefWidth="453.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="192.0" style="-fx-background-color: #ffffff;" text="추천앨범 내용">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox minHeight="60.0" prefHeight="60.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="label_rcmContents" alignment="TOP_LEFT" prefHeight="101.0" prefWidth="453.0" text="Label">
+                           <HBox.margin>
+                              <Insets top="3.0" />
+                           </HBox.margin></Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Line endX="625.0" layoutX="120.0" layoutY="331.0" startX="-92.0" stroke="#9c0000" />
+      <JFXButton layoutX="535.0" layoutY="689.0" onAction="#updateRcmAlbum" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #090948;" text="Update" textFill="WHITE" />
+      <JFXButton layoutX="640.0" layoutY="689.0" onAction="#cancel" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #090948;" text="Delete" textFill="WHITE" />
+      <JFXTreeTableView fx:id="tbl_music" layoutX="28.0" layoutY="354.0" prefHeight="294.0" prefWidth="718.0" AnchorPane.rightAnchor="27.0">
+         <columns>
+            <TreeTableColumn fx:id="col_MusicName" prefWidth="216.0" text="곡" />
+            <TreeTableColumn fx:id="col_AlbName" prefWidth="201.0" text="앨범 " />
+            <TreeTableColumn fx:id="col_SingerName" prefWidth="298.0" text="아티스트" />
+            <TreeTableColumn fx:id="col_Deletebtn" minWidth="0.0" prefWidth="0.0" visible="false" />
+            <TreeTableColumn fx:id="col_MusicNo" minWidth="0.0" prefWidth="0.0" text="곡 번호" visible="false" />
+         </columns>
+      </JFXTreeTableView>
+      <Label fx:id="lable_cntMusic" alignment="TOP_RIGHT" layoutX="676.0" layoutY="658.0" prefHeight="15.0" prefWidth="70.0" text="0 곡 ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="294.0" layoutY="278.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="좋아요">
+         <graphic>
+            <FontAwesomeIcon fill="#9c0000" iconName="HEART" />
+         </graphic>
+         <font>
+            <Font name="YDIYGO340" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_LikeCnt" layoutX="367.0" layoutY="278.0" prefWidth="200.0" text="???" textFill="#090c64">
+         <font>
+            <Font name="YDIYGO340" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="70.0" layoutY="281.0" onAction="#wideView" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: #090948;" text="크게보기" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="SEARCH" />
+         </graphic>
+         <font>
+            <Font name="YDIYGO340" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

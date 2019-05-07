@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="I_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="448.0" minWidth="-Infinity" prefHeight="768.0" prefWidth="1005.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.support.noticeboard.NoticeBoardUpdateController">
+   <children>
+      <Label layoutX="38.0" layoutY="49.0" text="공지사항" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="15.0">
+         <font>
+			<Font name="YDIYGO350" size="30.0" />
+		</font>
+      </Label>
+      <GridPane layoutX="149.0" layoutY="86.0" prefHeight="418.0" prefWidth="674.0" AnchorPane.leftAnchor="149.0" AnchorPane.topAnchor="86.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="121.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="553.0" minWidth="10.0" prefWidth="553.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="378.0" minHeight="10.0" prefHeight="378.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="제  목" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="내  용" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="15.0" />
+               </GridPane.margin>
+            </Label>
+            <JFXTextField fx:id="Text_ntcTitle" maxWidth="464.0" minWidth="440.0" prefHeight="29.0" prefWidth="444.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <JFXTextArea fx:id="Text_ntcContent" maxWidth="449.0" minHeight="157.0" minWidth="440.0" prefHeight="157.0" prefWidth="449.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="I   D" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_id" text="아이디" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="53.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <JFXButton id="btn" fx:id="btn_upd" layoutX="503.0" layoutY="540.0" text="수  정" AnchorPane.leftAnchor="503.0" AnchorPane.topAnchor="540.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="480.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.message.MessageTextController">
+   <children>
+      <VBox layoutX="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="480.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="480.0" style="-fx-background-color: #090948;">
+               <children>
+                  <Text fill="WHITE" layoutY="35.8046875" strokeType="OUTSIDE" strokeWidth="0.0" text="       TO." wrappingWidth="134.12109375" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="13.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="textF_Userid" layoutX="130.0" layoutY="8.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="293.0" text="Label" textFill="WHITE" AnchorPane.topAnchor="8.0">
+                     <font>
+                        <Font name="YDIYGO350" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="480.0" />
+            <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="143.0" prefWidth="480.0">
+               <children>
+                  <HBox prefHeight="57.0" prefWidth="556.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="130.0" text="   제      목 :">
+                           <font>
+                              <Font name="YDIYGO350" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="4.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="textF_Title" prefHeight="46.0" prefWidth="343.0" text="Label">
+                           <font>
+                              <Font name="YDIYGO320" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="480.0">
+               <children>
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="130.0" text="     보낸 날짜 :">
+                     <font>
+                        <Font name="YDIYGO350" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="la_SendDate" prefHeight="43.0" prefWidth="312.0" text="Label">
+                     <font>
+                        <Font name="YDIYGO320" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="480.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Button layoutX="208.0" layoutY="269.0" mnemonicParsing="false" onAction="#btn_Ok" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: #090948;" text="확 인" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="textA_content" alignment="TOP_LEFT" layoutX="22.0" layoutY="14.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="435.0" style="-fx-background-color: #ffffff; -fx-border-color: #090948;" text="Label" wrapText="true" AnchorPane.leftAnchor="23.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

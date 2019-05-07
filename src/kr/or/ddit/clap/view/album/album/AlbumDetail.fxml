@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="773.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.album.album.AlbumDetailController">
+   <children>
+      <Label fx:id="label_albumName1" layoutX="26.0" layoutY="26.0" prefHeight="41.0" prefWidth="718.0" text="앨범 명" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="0.0">
+      </Label>
+      <HBox layoutX="15.0" layoutY="67.0" prefHeight="211.0" prefWidth="734.0" style="border: #54b823;" AnchorPane.topAnchor="32.0">
+         <children>
+            <ImageView fx:id="imgview_albumImg" fitHeight="211.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="13.0" right="30.0" />
+               </HBox.margin></ImageView>
+            <VBox prefHeight="165.0" prefWidth="470.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="아티스트">
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="label_singerName" prefWidth="200.0" text="???">
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="발 매 일">
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="label_saledate" prefHeight="15.0" prefWidth="200.0" text="???">
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="발 매 사">
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="label_saleEnter" prefWidth="200.0" text="???">
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="기 획 사">
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="label_entertain" prefWidth="200.0" text="???">
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="453.0">
+                     <children>
+                        <Label prefWidth="85.0" style="-fx-background-color: #ffffff;" text="좋아요">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9c0000" iconName="HEART" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="label_LikeCnt" prefWidth="200.0" text="???" textFill="#090c64">
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <Line endX="625.0" layoutX="120.0" layoutY="331.0" startX="-92.0" stroke="#9c0000" AnchorPane.leftAnchor="27.5" AnchorPane.rightAnchor="27.5" AnchorPane.topAnchor="300.0" />
+      <JFXButton layoutX="70.0" layoutY="286.0" onAction="#wideView" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: #090948;" text="크게보기" textFill="WHITE" AnchorPane.leftAnchor="88.0" AnchorPane.topAnchor="247.0">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="SEARCH" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="26.0" layoutY="343.0" prefHeight="41.0" prefWidth="214.0" text="앨범 소개" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="308.0">
+      </Label>
+      <Label fx:id="txt_intro" alignment="TOP_LEFT" layoutX="36.0" layoutY="384.0" prefHeight="296.0" prefWidth="703.0" text=" 앨범 소개" wrapText="true" AnchorPane.topAnchor="355.0" />
+      <JFXButton layoutX="506.0" layoutY="689.0" onAction="#updateAlbum" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #090948;" text="Update" textFill="WHITE" AnchorPane.leftAnchor="506.0" AnchorPane.topAnchor="660.0" />
+      <JFXButton layoutX="633.0" layoutY="689.0" onAction="#deleteAlbum" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #090948;" text="Delete" textFill="WHITE" AnchorPane.leftAnchor="627.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="660.0" />
+   </children>
+</AnchorPane>

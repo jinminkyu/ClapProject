@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="contents" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="-Infinity" prefHeight="800.0" prefWidth="1005.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../../../table.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.recommend.album.ShowRecommendAlbumController">
+   <children>
+      <AnchorPane fx:id="main" layoutX="224.0" layoutY="-7.0" prefHeight="768.0" prefWidth="773.0">
+         <children>
+            <Line endX="634.0" layoutX="124.0" layoutY="86.0" startX="-100.0" stroke="#9c0000" />
+            <JFXButton layoutX="643.0" layoutY="51.0" onAction="#InsertRecommendAlbum" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #090948;" text="Insert" textFill="WHITE" />
+            <Label id="header_font" layoutX="53.0" layoutY="35.0" prefHeight="51.0" prefWidth="298.0" text="추천앨범  관리" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="22.0" />
+            <VBox fx:id="main_vbox" layoutX="22.0" layoutY="87.0" prefHeight="72.0" prefWidth="738.0" spacing="10.0" />
+         </children>
+      </AnchorPane>
+      <VBox layoutX="35.0" layoutY="70.0" prefHeight="668.0" prefWidth="189.0" style="-fx-border-color: #9c0000; -fx-background-color:#090948;" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <AnchorPane prefHeight="187.0" prefWidth="187.0">
+               <children>
+                  <ImageView fx:id="imgeview" fitHeight="138.0" fitWidth="127.0" layoutX="32.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="25.0" />
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="85.0" prefWidth="191.0">
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <Label id="label_name" fx:id="session_id" alignment="CENTER" prefHeight="15.0" prefWidth="256.0" text="관리자" textFill="WHITE" BorderPane.alignment="CENTER" />
+                     </top>
+                  </BorderPane>
+               </children>
+            </VBox>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#MemManag" prefHeight="41.0" prefWidth="250.0" text="회원 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="-20.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#SingManag" prefHeight="41.0" prefWidth="260.0" text="가수 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#AlbManag" prefHeight="41.0" prefWidth="260.0" text=" 앨범 관리 " textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#MusManag" prefHeight="41.0" prefWidth="296.0" text="곡 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#Recommen" prefHeight="41.0" prefWidth="370.0" text="추천 관리" textFill="#9c0000">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#Event" prefHeight="41.0" prefWidth="320.0" text="Event 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="left_label" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#Sales" prefHeight="41.0" prefWidth="303.0" text="매출 관리" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Head" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="894.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.member.profiles.LikeAlbController">
+   <children>
+      <VBox layoutX="4.0" layoutY="29.0" prefHeight="867.0" prefWidth="720.0">
+         <children>
+            <AnchorPane prefHeight="587.0" prefWidth="720.0">
+               <children>
+                  <JFXCheckBox fx:id="chbox_main" checkedColor="#9c0000" layoutX="13.0" layoutY="39.0" onAction="#mainCheck" prefHeight="24.0" prefWidth="37.0" text=" " unCheckedColor="#090948" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="39.0" />
+                  <JFXTreeTableView fx:id="tbl_like" layoutX="11.0" layoutY="87.0" prefHeight="400.0" prefWidth="704.0" stylesheets="@../../../../../../../mypage.css" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="87.0">
+                     <columns>
+                        <TreeTableColumn fx:id="col_Checks" prefWidth="36.0" text="  " />
+                        <TreeTableColumn fx:id="col_Img" prefWidth="136.0" text=" " />
+                        <TreeTableColumn fx:id="col_Its" prefWidth="130.0" text="아티스트" />
+                        <TreeTableColumn fx:id="col_Alb" prefWidth="197.0" text="앨범명" />
+                        <TreeTableColumn fx:id="col_LikeIndate" prefWidth="137.0" text="좋아요 한 날" />
+                        <TreeTableColumn fx:id="col_Like" prefWidth="67.0" text="좋아요" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <Pagination fx:id="p_Paging" layoutX="11.0" layoutY="88.0" prefHeight="458.0" prefWidth="704.0" />
+                  <JFXButton layoutX="51.0" layoutY="37.0" onAction="#btnMainPlay" ripplerFill="#9c0000" text="듣기" AnchorPane.topAnchor="37.0">
+                     <graphic>
+                        <FontAwesomeIcon iconName="PLAY_CIRCLE_ALT" size="20" />
+                     </graphic>
+                    
+                  </JFXButton>
+                  <JFXButton layoutX="111.0" layoutY="37.0" onAction="#btnMainAdd" ripplerFill="#9c0000" text="추가" AnchorPane.topAnchor="37.0">
+                     <graphic>
+                        <FontAwesomeIcon iconName="PLUS" size="20" />
+                     </graphic>
+                     
+                  </JFXButton>
+                  <JFXButton layoutX="169.0" layoutY="37.0" onAction="#btnMainPut" ripplerFill="#9c0000" text="담기" AnchorPane.topAnchor="37.0">
+                     <graphic>
+                        <FontAwesomeIcon iconName="FOLDER_ALT" size="20" />
+                     </graphic>
+                   
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

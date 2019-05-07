@@ -1,0 +1,97 @@
+* {
+  	
+  	-fx-font-family: "-윤고딕330";
+}
+
+.tree-table-row-cell:selected .tree-table-cell .label{
+    -fx-text-fill: white;
+}
+#text1, #text2,#text3,#text4,#text5,#label_Id{
+		-fx-font-size: 14pt;
+}
+#la_mypge, #la_Date, #la_Date2{
+	-fx-font-size: 18pt;
+}
+#text_UserInfo{
+	-fx-font-size: 12pt;
+}
+
+#la_MyAlbName,#text{
+	-fx-font-size: 14pt;
+}
+
+.tree-table-row-cell:selected .tree-table-cell{
+	-fx-background-color: rgba(156, 0, 0, 0.76);
+    -fx-table-cell-border-color: rgba(156, 0, 0, 0.76);
+}
+.jfx-button {
+	
+}
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+    -fx-text-fill: white;
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected {
+    -fx-background-color: rgba(156, 0, 0, 0.76);
+    -fx-table-cell-border-color: rgba(156, 0, 0, 0.76);
+    
+}
+.tree-table-row-cell{
+	-fx-font-family: "-윤고딕330";
+}
+
+.tree-table-view .column-header{
+    -fx-background-color: #090948;
+    -fx-border-color: white;
+     -fx-font-family: "-윤고딕330";
+}
+
+ .table-column {
+  -fx-alignment: CENTER;
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+    -fx-text-fill: white;
+   
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected {
+    -fx-background-color: #9c0000;
+    -fx-table-cell-border-color: #9c0000;
+    
+}
+.tree-table-row-cell{
+	-fx-font-family: "-윤고딕330";
+}
+
+.tree-table-view .column-header{
+    -fx-background-color: white;
+    -fx-border-color: #c9c9c9;
+    -fx-font-family: "-윤고딕330";
+}
+
+.button{
+	 -fx-font-family: "-윤고딕330";
+}
+
+.tab:selected{
+	-fx-border-width: 0 0 5 0;
+	-fx-border-color: #9c0000;
+}
+
+.pagination .toggle-button {
+	
+	-fx-background-radius:15px;
+	-fx-background-color:white;
+	
+}
+
+.pagination .toggle-button:selected{
+	-fx-background-radius:15px;
+	-fx-background-color:#9c0000;
+}
+
+.pagination .button{
+	-fx-padding: 8 10 8 10px;
+	-fx-background-color:white;
+}

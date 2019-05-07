@@ -1,0 +1,60 @@
+* {
+
+}
+
+#lb1, #lb22, #lb23, #lb24, #lb25{
+   -fx-font-family: "-윤고딕330";
+   -fx-font-size: 22pt;
+}
+#lb2, #btn_next{
+   -fx-font-family: "-윤고딕330";
+   -fx-font-size: 12pt;
+}
+#lb3, #lb4, #lb5, #lb6, #lb7, #lb_next, #lb9, #lb10, #lb11, #lb12, #lb13, #lb14, #lb15, #lb16, #lb17, #lb18, 
+#btn_idCheck, #lb_id, #lb_pw, #lb_pwCheck, #radio_m, #radio_f, #picker, #txt_tel, #lb_bir, #lb_tel, #txt_name, 
+#txt_pwCheck, #txt_pw, #txt_id, #txt_emailCheck, #txt_email, #txt_captcha, #lb_email, #lb_emailCheck, 
+#lb_captcha, #btn_email, #btn_emailCheck, #btn_refresh, #btn_captcha, #btn_ok, #lb_captcha2, #lb_ok{
+   -fx-font-family: "-윤고딕330";
+   -fx-font-size: 11pt;
+}
+#txtArea1, #txtArea2{
+   -fx-font-family: "-윤고딕330";
+}
+#lb8{
+   -fx-font-family: "-윤고딕330";
+   -fx-font-size: 18pt;
+}
+#lb19, #lb20, #lb21{
+	-fx-font-family: "-윤고딕330";
+    -fx-font-size: 10pt;
+}
+#btn_ok{
+	-fx-background-color: #090948;
+	-fx-text-fill: white;
+	-fx-font-size: 14pt;
+}
+#lb23, #lb24, #lb25{
+   -fx-font-family: "-윤고딕330";
+   -fx-font-size: 21pt;
+}
+
+#btn {
+	 -fx-font-family: "-윤고딕330";
+	-fx-background-color: #090948;
+	-fx-text-fill: white;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

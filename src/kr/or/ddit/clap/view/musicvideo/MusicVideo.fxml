@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#escEvent" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.musicvideo.MusicVideoController">
+   <children>
+      <StackPane fx:id="stackpane" prefHeight="690.0" prefWidth="880.0">
+         <effect>
+            <ColorAdjust contrast="-0.31" hue="-0.07" saturation="-0.24" />
+         </effect>
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="880.0" pickOnBounds="true">
+               <StackPane.margin>
+                  <Insets bottom="650.0" />
+               </StackPane.margin>
+               <image>
+                  <Image url="@../../../../../../../img/playermain.jpg" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="0.58" contrast="1.0" hue="0.05" saturation="0.35" />
+               </effect>
+            </ImageView>
+            <MediaView fx:id="view" fitHeight="648.0" fitWidth="880.0">
+               <StackPane.margin>
+                  <Insets top="39.0" />
+               </StackPane.margin></MediaView>
+         </children>
+      </StackPane>
+      <HBox prefHeight="690.0">
+         <children>
+            <VBox alignment="TOP_CENTER" focusTraversable="true" prefHeight="586.0" prefWidth="880.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="label_musName" alignment="CENTER" prefHeight="21.0" prefWidth="867.0" text="곡 제목" textFill="WHITE">
+                           <font>
+                              <Font name="-윤고딕330" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="500.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox fx:id="vbox_bar">
+                     <children>
+                        <JFXSlider onMouseExited="#MouseExit" fx:id="slider_volum" orientation="VERTICAL" prefHeight="46.0" prefWidth="14.0">
+                           <VBox.margin>
+                              <Insets left="70.0" />
+                           </VBox.margin>
+                        </JFXSlider>
+                        <HBox alignment="CENTER_LEFT" prefWidth="880.0">
+                           <children>
+                              <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onPlay" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text="">
+                                 <graphic>
+                                    <FontAwesomeIcon fx:id="icon_play" fill="WHITE" iconName="PLAY" size="30" />
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton onMouseEntered="#MouseEnter" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text="">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" iconName="VOLUME_UP" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <Label fx:id="Label_nowTime" alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" prefWidth="40.0" text="00:00" textFill="WHITE">
+                                 <font>
+                                    <Font name="-윤고딕350" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <JFXSlider fx:id="slider_time" maxWidth="570.0" prefHeight="14.0" prefWidth="570.0" value="0.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXSlider>
+                              <Label fx:id="Label_finalTime" alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" prefWidth="40.0" text="00:00" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="-윤고딕350" size="12.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="btn_full" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#fullScreen" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text=" ">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" iconName="ARROWS_ALT" size="30" />
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

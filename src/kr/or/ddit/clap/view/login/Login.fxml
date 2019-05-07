@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="724.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../../Login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.login.LoginController">
+   <children>
+      <HBox maxWidth="200.0" prefHeight="50.0" prefWidth="100.0">
+         <children>
+            <FontAwesomeIcon iconName="USER" size="30">
+               <HBox.margin>
+                  <Insets left="5.0" right="10.0" top="11.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label fx:id="lb1" prefHeight="50.0" text="CLAP : 로그인" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="81.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="74.0" prefWidth="200.0">
+         <children>
+            <VBox maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="240.0">
+               <children>
+                  <JFXTextField fx:id="txt_id" focusColor="#9c0000" unFocusColor="#090948">
+                     <VBox.margin>
+                        <Insets top="9.0" />
+                     </VBox.margin></JFXTextField>
+                  <JFXPasswordField fx:id="txt_pw" focusColor="#9c0000" unFocusColor="#090948">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></JFXPasswordField>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </VBox>
+            <JFXButton fx:id="btn_login" onAction="#login" prefHeight="44.0" prefWidth="79.0" style="-fx-background-color: #090948;" text="로그인" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </HBox.margin></JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <Label fx:id="lb_check" text="아이디 또는 비밀번호를 확인해주세요." textFill="RED" visible="false">
+         <VBox.margin>
+            <Insets bottom="10.0" left="35.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="23.0" prefWidth="200.0">
+         <children>
+            <JFXButton id="btn" fx:id="btn_search" onAction="#search" text="아이디 / 비밀번호 찾기">
+               <HBox.margin>
+                  <Insets left="120.0" />
+               </HBox.margin></JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="box1" alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="200.0" spacing="10.0" visible="false">
+         <children>
+            <Label fx:id="lb2" alignment="CENTER_RIGHT" prefWidth="100.0" text="보안문자 입력">
+               <HBox.margin>
+                  <Insets left="8.0" top="4.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fx:id="img_captcha" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton fx:id="btn_refresh" onAction="#imgRefresh" style="-fx-background-color: #090948;" text="새로고침" textFill="WHITE" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="box2" prefHeight="35.0" prefWidth="200.0" spacing="10.0" visible="false">
+         <children>
+            <Label fx:id="lb3" alignment="CENTER_RIGHT" prefWidth="100.0" text=" ">
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin>
+            </Label>
+            <JFXTextField fx:id="txt_captcha" prefWidth="138.0" />
+            <JFXButton fx:id="btn_captcha" onAction="#captchaCheck" style="-fx-background-color: #090948;" text="입력 확인" textFill="WHITE" />
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="box3" prefHeight="15.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="lb_captcha" text="확인되었습니다." visible="false">
+               <HBox.margin>
+                  <Insets left="116.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="300.0" top="30.0" />
+   </padding>
+</VBox>

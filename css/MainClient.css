@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+#header{
+	 -fx-font-family:url("../font/윤고딕340.ttf");
+    -fx-font-weight: bold;
+    -fx-font-size: 14
+}
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXProgressBar fx:id="progress" layoutX="100.0" layoutY="200.0" opacity="0.0" />
+      <VBox fx:id="childBox" prefHeight="420.0" prefWidth="400.0">
+         <children>
+            <HBox minHeight="51.0" prefHeight="51.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="133.0" style="-fx-border-color: black;" text="일반 결제 ">
+                     <font>
+                        <Font name="YDIYGO330" size="27.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="245.0">
+                     <children>
+                        <FontAwesomeIcon iconName="CREDIT_CARD" size="30">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="7.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label fx:id="lb_card" prefHeight="46.0" prefWidth="170.0" text="NH농협은행">
+                           <font>
+                              <Font name="YDIYGO330" size="26.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator maxWidth="370.0" prefWidth="180.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Separator>
+            <VBox prefHeight="91.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <Label text="가맹점명">
+                           <font>
+                              <Font name="YDIYGO330" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="clap">
+                           <font>
+                              <Font name="YDIYGO330" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="21.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <Label text="결제금액">
+                           <font>
+                              <Font name="YDIYGO330" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblb1" text="5,000원">
+                           <font>
+                              <Font name="YDIYGO330" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="21.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <Label text="결제일시">
+                           <font>
+                              <Font name="YDIYGO330" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblb2" text="2019-01-09 20:13:23">
+                           <font>
+                              <Font name="YDIYGO330" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator maxWidth="370.0" prefWidth="180.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Separator>
+            <VBox prefHeight="177.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label text="카드번호">
+                     <font>
+                        <Font name="YDIYGO330" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt1" />
+                        <TextField fx:id="txt2" />
+                        <PasswordField fx:id="txt3" />
+                        <PasswordField fx:id="txt4" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lb_error" text="카드번호를 확인해주세요." textFill="RED" visible="false">
+                     <font>
+                        <Font name="YDIYGO330" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="103.0" top="-8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="142.0" prefWidth="400.0" spacing="30.0">
+                     <children>
+                        <JFXButton fx:id="btn_okok" minHeight="41.0" minWidth="100.0" prefWidth="100.0" style="-fx-border-color: #d3d3d3; -fx-background-color: #090948;" text="결제" textFill="WHITE">
+                           <font>
+                              <Font name="YDIYGO350" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_cancel" minHeight="41.0" minWidth="100.0" prefWidth="100.0" style="-fx-border-color: #d3d3d3; -fx-background-color: #090948;" text="취소" textFill="WHITE">
+                           <font>
+                              <Font name="YDIYGO350" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="5.0" layoutY="54.0" prefHeight="5.0" prefWidth="133.0" style="-fx-background-color: white;" />
+      <VBox layoutX="137.0" layoutY="54.0" prefHeight="1.0" prefWidth="257.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>

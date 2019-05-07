@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="630.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="55.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="프로필 사진" AnchorPane.leftAnchor="55.0">
+         <font>
+            <Font name="YDIYGO350" size="19.0" />
+         </font></Text>
+      <Text layoutX="55.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="소개글" AnchorPane.leftAnchor="55.0">
+     </Text>
+      <Text layoutX="177.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="프로필 이미지로 설정할 사진을 선택해주세요. (최대 2MB)" />
+      <Text layoutX="177.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="등록하시면 바로 프로필 사진으로 등록됩니다." />
+      <Text fill="#dd1616" layoutX="177.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="선정적 또는 상업적 이미지 등록 시 관리자에 의해 삭제 될 수 있습니다." />
+      <Button fx:id="btn_Image" layoutX="436.0" layoutY="180.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="97.0" style="-fx-background-color: #090948;" text="찾아보기  " textFill="WHITE">
+         <font>
+            <Font name="YDIYGO350" size="15.0" />
+         </font></Button>
+      <TextField fx:id="textF_File" layoutX="177.0" layoutY="182.0" prefHeight="29.0" prefWidth="250.0" />
+      <Button fx:id="btn_ProfileCl" layoutX="308.0" layoutY="351.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #090948;" text="취소" textFill="WHITE">
+         <font>
+            <Font name="YDIYGO350" size="16.0" />
+         </font></Button>
+      <Button fx:id="btn_ProfileOk" layoutX="234.0" layoutY="351.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #090948;" text="설정" textFill="WHITE">
+         <font>
+            <Font name="YDIYGO350" size="16.0" />
+         </font></Button>
+      <TextField fx:id="textF_Info" layoutX="55.0" layoutY="290.0" prefHeight="29.0" prefWidth="500.0" AnchorPane.leftAnchor="55.0" />
+      <ImageView fx:id="imgview_UserImg" fitHeight="136.0" fitWidth="138.0" layoutX="30.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXCheckBox fx:id="chBox_del" checkedColor="#9c0000" layoutX="538.0" layoutY="187.0" text="삭제">
+         <font>
+            <Font name="YDIYGO350" size="15.0" />
+         </font></JFXCheckBox>
+      <JFXButton fx:id="btn_InfoDel" layoutX="559.0" layoutY="286.0" prefHeight="25.0" prefWidth="42.0" text="X">
+         <font>
+            <Font name="YDIYGO350" size="19.0" />
+         </font></JFXButton>
+      <Label layoutX="22.0" layoutY="14.0" prefHeight="42.0" prefWidth="630.0" style="-fx-background-color: #090948;" text="        프로필 설정" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="YDIYGO350" size="19.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="WHITE" iconName="SEARCH" layoutX="511.0" layoutY="201.0" size="1.3em" />
+   </children>
+</AnchorPane>

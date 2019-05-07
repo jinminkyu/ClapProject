@@ -1,0 +1,49 @@
+* {
+  
+}
+.tab{
+	-fx-background-color: #cdcdcd;
+	
+}
+
+.tab-header-background{
+	-fx-background-color: #cdcdcd;
+	
+}
+
+.tab-label{
+    -fx-font-family: "-윤고딕320";
+    -fx-font-size: 18;
+}
+
+.tree-table-row-cell:selected .tree-table-cell .label{
+    -fx-text-fill: white;
+}
+
+.tree-table-row-cell:selected .tree-table-cell{
+	-fx-background-color: rgba(156, 0, 0, 0.76);
+    -fx-table-cell-border-color: rgba(156, 0, 0, 0.76);
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+    -fx-text-fill: white;
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected {
+    -fx-background-color: rgba(156, 0, 0, 0.76);
+    -fx-table-cell-border-color: rgba(156, 0, 0, 0.76);
+    
+}
+.tree-table-row-cell{
+	-fx-font-family: "-윤고딕330";
+}
+
+.tree-table-view .column-header{
+    -fx-background-color: white;
+    -fx-border-color: white;
+     -fx-font-family: "-윤고딕330";
+}
+
+.table-column {
+  -fx-alignment: CENTER-LEFT;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contents" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="635.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../../mypage.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.message.ShowMessageController">
+   <children>
+      <JFXTreeTableView fx:id="tbl_Message" layoutX="20.0" layoutY="106.0" prefHeight="317.0" prefWidth="600.0" stylesheets="@../../../../../../mypage.css" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="80.0">
+         <columns>
+            <TreeTableColumn fx:id="col_imgeview" prefWidth="65.0" text=" " />
+            <TreeTableColumn fx:id="col_title" prefWidth="184.0" text="제목" />
+            <TreeTableColumn fx:id="col_SendId" prefWidth="78.0" text="보낸이" />
+            <TreeTableColumn fx:id="col_SendDate" prefWidth="124.0" text="보낸 날짜" />
+            <TreeTableColumn fx:id="col_ReadDate" prefWidth="89.0" text="읽은 날짜" />
+            <TreeTableColumn fx:id="col_Check" prefWidth="79.0" />
+         </columns>
+      </JFXTreeTableView>
+      <Pagination fx:id="p_paging" layoutX="10.0" layoutY="67.0" prefHeight="382.0" prefWidth="614.0" />
+      <Button layoutX="253.0" layoutY="466.0" mnemonicParsing="false" onAction="#btn_Ok" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #090948;" text="확인" textFill="WHITE">
+         <font>
+            <Font name="YDIYGO350" size="16.0" />
+         </font></Button>
+      <Button layoutX="315.0" layoutY="466.0" mnemonicParsing="false" onAction="#btn_Cl" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #090948;" text="삭제" textFill="WHITE">
+         <font>
+            <Font name="YDIYGO350" size="16.0" />
+         </font></Button>
+      <AnchorPane layoutY="14.0" prefHeight="50.0" prefWidth="635.0" style="-fx-background-color: #090948;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="68.0" layoutY="5.0" prefHeight="37.0" prefWidth="210.0" text="나의 쪽지함" textFill="WHITE">
+               <font>
+                  <Font name="YDIYGO350" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="WHITE" iconName="ENVELOPE" layoutX="24.0" layoutY="35.0" size="2.5em" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

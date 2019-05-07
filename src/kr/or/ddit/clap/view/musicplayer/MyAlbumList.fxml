@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane_myalbum" minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="438.0"  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.musicplayer.MyAlbumListController">
+   <children>
+      <VBox>
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label fx:id="label_name" prefHeight="15.0" prefWidth="361.0" text="MyAlbumName">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="YDIYGO350" size="15.0" />
+                     </font></Label>
+                  <JFXButton fx:id="btn_back" onAction="#backClick" ripplerFill="#9c0000" text="목록으로" />
+               </children>
+            </HBox>
+            <JFXTreeTableView fx:id="t_table" prefHeight="567.0" prefWidth="438.0">
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TreeTableColumn fx:id="tcol_check" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                  <TreeTableColumn fx:id="tcol_musicVbox" maxWidth="395.0" prefWidth="395.0" />
+               </columns>
+            </JFXTreeTableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

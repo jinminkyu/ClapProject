@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="773.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.clap.view.member.manage.MemberUpdateController">
+   <children>
+      <Label fx:id="label_MemName1" layoutX="26.0" layoutY="26.0" prefHeight="41.0" prefWidth="214.0" text="회원이름">
+         <font>
+            <Font name="YDIYGO350" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="15.0" layoutY="67.0" prefHeight="376.0" prefWidth="750.0" style="border: #54b823;">
+         <children>
+            <ImageView fx:id="imgview_MemImg" fitHeight="282.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin></ImageView>
+            <VBox prefHeight="231.0" prefWidth="453.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="32.0" prefWidth="105.0" style="-fx-background-color: #ffffff;" text="아이디">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="label_Memid" prefHeight="18.0" prefWidth="133.0" text="???">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="73.0" style="-fx-background-color: #ffffff;" text="비밀번호">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXPasswordField fx:id="textF_Mempw" maxWidth="122.0" minWidth="122.0" prefHeight="35.0" prefWidth="122.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="회원이름">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="textF_Memname2" maxWidth="121.0" minWidth="121.0" prefHeight="35.0" prefWidth="121.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #ffffff;" text="성별">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="combo_Memgender" prefHeight="15.0" prefWidth="103.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="생년월일">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXDatePicker fx:id="Date_MemBir" defaultColor="#9c0000" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="전화번호">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXTextField fx:id="textF_MemTel" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: #ffffff;" text="권한">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="combo_MemAuth" prefHeight="29.0" prefWidth="103.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: #ffffff;" text="등급">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXComboBox fx:id="combo_MemGrade" prefHeight="29.0" prefWidth="103.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="이메일 ">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="textF_MemEmail" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="44.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="가입일">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="Date_Indate" defaultColor="#9c0000" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="51.0" prefWidth="105.0" style="-fx-background-color: #ffffff;" text="탈퇴여부">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="combo_DelTF" prefHeight="29.0" prefWidth="103.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="453.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="105.0" style="-fx-background-color: #ffffff;" text="신고횟수">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="label_BlackCnt" prefHeight="18.0" prefWidth="123.0" text="???">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="28.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" text="블랙리스트여부">
+                           <font>
+                              <Font name="YDIYGO340" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXComboBox fx:id="combo_blackTF" prefHeight="29.0" prefWidth="103.0" />
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Line endX="625.0" layoutX="120.0" layoutY="451.0" startX="-92.0" stroke="#9c0000" />
+      <JFXButton layoutX="80.0" layoutY="409.0" onAction="#ChangeView" prefHeight="26.0" prefWidth="133.0" style="-fx-background-color: #090948;" text="이미지 변경" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="SEARCH" text="" />
+         </graphic>
+         <font>
+            <Font name="YDIYGO340" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="26.0" layoutY="464.0" prefHeight="41.0" prefWidth="214.0" text="회원의 자기소개">
+         <font>
+            <Font name="YDIYGO350" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="519.0" layoutY="699.0" onAction="#updateMem" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #090948;" text="Update" textFill="WHITE" />
+      <JFXButton layoutX="643.0" layoutY="699.0" onAction="#cancel" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #090948;" text="Cancel" textFill="WHITE" />
+      <TextArea fx:id="txt_intro" layoutX="28.0" layoutY="512.0" prefHeight="170.0" prefWidth="724.0" />
+   </children>
+</AnchorPane>
